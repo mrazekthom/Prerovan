@@ -1,2 +1,2 @@
 # Prerovan
-Small information web for Prerov and vicinity
+Small information web for Přerov and vicinity
