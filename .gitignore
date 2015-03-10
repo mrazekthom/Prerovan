@@ -1,0 +1,14 @@
+# IDE folders
+nbproject/
+.idea/
+
+# temp folders
+temp/*
+log/*
+www/webtemp/*
+
+# composer
+vendor/
+
+# local configuration
+config.local.neon
