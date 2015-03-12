@@ -7,23 +7,58 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
-	<title>{ifset title}{include title|striptags} | {/ifset}Nette Sandbox</title>
+	<title>Přerovan{ifset title} | {include title|striptags}{/ifset}</title>
 
 	<link rel="stylesheet" href="{$basePath}/css/style.css">
-	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	<link rel="stylesheet" href="{$basePath}/css/reset.css">
 	{block head}{/block}
 </head>
 
 <body>
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+    <div id="container">
 
+
+        <img id="header" src="{$basePath}/images/header.jpg">
+        <hr class="blue">
+        <div id="box">
+            <div id="mainMenu">
+                <ul>
+                    <li>INZERCE</li>
+                    <li>KAM ZA KULTUROU</li>
+                    <li>BAZÉN, SAUNA</li>
+                    <li>BRUSLENÍ</li>
+                    <li>FOTOGALERIE</li>
+                    <li>OPUSTILI NÁS</li>
+                </ul>
+            </div>
+            <div id="content">
+                <img id="mainBanner" src="{$basePath}/images/mainBanner.jpg">
+            </div>
+            <div id="sideContent">
+                <ul>
+                    <li>INZERCE</li>
+                    <li>KAM ZA KULTUROU</li>
+                    <li>BAZÉN, SAUNA</li>
+                    <li>BRUSLENÍ</li>
+                    <li>FOTOGALERIE</li>
+                    <li>OPUSTILI NÁS</li>
+                </ul>
+                <img id="shelder" src="{$basePath}/images/shelter.jpg">
+                <img id="3s_banner" src="{$basePath}/images/3s_banner.jpg">
+                <img src="{$basePath}/images/200x200.jpg">
+                <img src="{$basePath}/images/200x200.jpg">
+            </div>
+        </div>
+        <div id="sideBanner">
+            <image src="{$basePath}/images/sideBanner.jpg">
+            <image src="{$basePath}/images/sideBanner.jpg">
+            <image src="{$basePath}/images/sideBanner.jpg">
+            <image src="{$basePath}/images/sideBanner.jpg">
+            <image src="{$basePath}/images/sideBanner.jpg">
+            <image src="{$basePath}/images/sideBanner.jpg">
+        </div>
+    </div>
 	{include content}
-
-	{block scripts}
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//nette.github.io/resources/js/netteForms.min.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-	{/block}
 </body>
 </html>
