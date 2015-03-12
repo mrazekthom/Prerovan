@@ -2,7 +2,6 @@
     width: 1024px;
     margin: 0 auto;
     font-family: Calibri;
-    /**/
 }
 
 #header{
@@ -11,14 +10,11 @@
 #box{
     width: 864px;
     float: left;
-    /**/
-    height: 500px;
 }
 
 #sideBanner{
     width: 160px;
     float: left;
-    /**/
 }
 
 #sideBanner img{
@@ -29,7 +25,6 @@
 
 #mainMenu{
     width: 100%;
-    /**/
 }
 
 #mainMenu ul{
@@ -52,17 +47,12 @@
 #content{
     width: 640px;
     float: left;
-    /**/
-    background-color: yellow;
-    height: 200px;
 }
 
 #mainBanner{
     width: 100%;
     height: 100px;
     margin: 0 0 10px 0;
-    /**/
-    background-color: green;
 }
 
 #sideContent{
@@ -87,6 +77,26 @@
 
 #sideContent img{
     margin: 5px 0;
+}
+
+#footer{
+    width: 100%;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+    margin: 5px 0;
+}
+
+#footer ul{
+    margin: 0 auto;
+}
+
+#footer ul li{
+    margin: 5px 25px;
+    font-size: 16px;
+    color: #66676b;
+    float: left;
 }
 
 .blue{
