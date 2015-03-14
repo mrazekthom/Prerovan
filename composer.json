@@ -2,13 +2,9 @@
 	"require": {
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.3.0",
-		"dg/adminer-custom": "~1.6",
-        "tharos/leanmapper": "dev-master"
+        "tharos/leanmapper": "~2.2",
+        "jsmitka/nette-xdebug-helper": "dev-master"
 	},
     "minimum-stability": "beta",
     "prefer-stable": true,
-
-	"require-dev": {
-		"nette/tester": "~1.3"
-	}
 }

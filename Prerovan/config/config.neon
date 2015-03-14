@@ -4,7 +4,6 @@
 #
 parameters:
 
-
 php:
 	date.timezone: Europe/Prague
 
@@ -13,6 +12,11 @@ application:
 	errorPresenter: Error
 	mapping:
 		*: App\*Module\Presenters\*Presenter
+
+
+tracy:
+    bar:
+        - NetteExtras\XDebugHelper(PHPSTORM)
 
 
 session:
@@ -24,5 +28,5 @@ services:
 	- App\Forms\SignFormFactory
 	router: App\RouterFactory::createRouter
 
-extension:
+extensions:
     leanMapper: Minicup\Model\LeanMapperExtension
