@@ -11,6 +11,11 @@
 
 	    <link rel="stylesheet" href="{$basePath}/css/style.css">
 	    <link rel="stylesheet" href="{$basePath}/css/reset.css">
+
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Tomáš Mrázek">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
 	    {block head}{/block}
     </head>
 
@@ -33,6 +38,7 @@
                 </div>
                 <div id="content">
                     <img id="mainBanner" src="{$basePath}/images/mainBanner.jpg">
+                    {include content}
                 </div>
                 <div id="sideContent">
                     <ul>

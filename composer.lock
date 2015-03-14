@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d55916aaed00befcdfccfd53ae9240d1",
+    "hash": "ce02b40e6e0ed3e4eeaa5383d6b47f31",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -87,54 +87,6 @@
                 "sqlite"
             ],
             "time": "2015-02-25 14:22:04"
-        },
-        {
-            "name": "jandrabek/tracy-gitversion-panel",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/repli2dev/tracy-gitversion-panel.git",
-                "reference": "2ece23e83f7e36e68b1e9784caaae1ff39c5a82b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/repli2dev/tracy-gitversion-panel/zipball/2ece23e83f7e36e68b1e9784caaae1ff39c5a82b",
-                "reference": "2ece23e83f7e36e68b1e9784caaae1ff39c5a82b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3.2",
-                "tracy/tracy": "~2.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JanDrabek\\Tracy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Vojtěch Vondra",
-                    "homepage": "http://www.vojtechvondra.cz"
-                },
-                {
-                    "name": "Jan Drábek",
-                    "homepage": "http://www.jandrabek.cz"
-                }
-            ],
-            "description": "Tracy DebugBar panel displaying current project git branch.",
-            "keywords": [
-                "branch",
-                "debug",
-                "git",
-                "log",
-                "nette"
-            ],
-            "time": "2014-09-02 13:50:05"
         },
         {
             "name": "latte/latte",
@@ -1525,8 +1477,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "tharos/leanmapper": 20,
-        "jandrabek/tracy-gitversion-panel": 20
+        "tharos/leanmapper": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
