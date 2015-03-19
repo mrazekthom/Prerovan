@@ -1,5 +1,5 @@
 leanMapper:
     host:
-    username: 'root'
-    password: ''
-    database: 'prerovan'
+    username:
+    password:
+    database:
