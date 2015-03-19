@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace Prerovan\Model;
 
 use Nette,
 	Nette\Utils\Strings,

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forms;
+namespace Prerovan\Forms;
 
 use Nette,
 	Nette\Application\UI\Form,

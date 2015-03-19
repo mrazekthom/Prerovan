@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Prerovan;
 
 use Nette,
 	Nette\Application\Routers\RouteList,

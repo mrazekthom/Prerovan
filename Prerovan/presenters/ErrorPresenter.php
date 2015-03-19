@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Presenters;
+namespace Prerovan\Presenters;
 
 use Nette,
-	App\Model,
+	Prerovan\Model,
 	Tracy\ILogger;
 
 
