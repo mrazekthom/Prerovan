@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'JanDrabek\\Tracy\\' => array($vendorDir . '/jandrabek/tracy-gitversion-panel/src'),
 );

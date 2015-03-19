@@ -1332,27 +1332,6 @@
         ]
     },
     {
-        "name": "dg/adminer-custom",
-        "version": "v1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/dg/adminer-custom.git",
-            "reference": "f1b449b7076d49711fdb41382e5bd858f09855d0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/dg/adminer-custom/zipball/f1b449b7076d49711fdb41382e5bd858f09855d0",
-            "reference": "f1b449b7076d49711fdb41382e5bd858f09855d0",
-            "shasum": ""
-        },
-        "time": "2015-02-07 20:26:30",
-        "type": "project",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "Customization for the best database management tool written in PHP, Adminer"
-    },
-    {
         "name": "nette/tester",
         "version": "v1.3.2",
         "version_normalized": "1.3.2.0",
@@ -1477,8 +1456,8 @@
     },
     {
         "name": "tharos/leanmapper",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Tharos/LeanMapper.git",
@@ -1515,5 +1494,97 @@
         ],
         "description": "Tiny ORM based on powerful dibi database abstraction library for PHP 5.",
         "homepage": "http://www.leanmapper.com"
+    },
+    {
+        "name": "jsmitka/nette-xdebug-helper",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jsmitka/Nette-XDebug-Helper.git",
+            "reference": "47124285a91d93af0056e986556887dfc8692546"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jsmitka/Nette-XDebug-Helper/zipball/47124285a91d93af0056e986556887dfc8692546",
+            "reference": "47124285a91d93af0056e986556887dfc8692546",
+            "shasum": ""
+        },
+        "require": {
+            "nette/nette": "2.*",
+            "php": ">= 5.3.0"
+        },
+        "require-dev": {
+            "ext-xdebug": "*"
+        },
+        "time": "2013-06-21 07:47:09",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "XDebugHelper.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jan Smitka",
+                "email": "jan.smitka@lynt.cz"
+            }
+        ],
+        "description": "Simple extension for Nette Framework, which integrates into the Debug Bar and enables you to easily start and stop a Xdebug session."
+    },
+    {
+        "name": "jandrabek/tracy-gitversion-panel",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/repli2dev/tracy-gitversion-panel.git",
+            "reference": "2ece23e83f7e36e68b1e9784caaae1ff39c5a82b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/repli2dev/tracy-gitversion-panel/zipball/2ece23e83f7e36e68b1e9784caaae1ff39c5a82b",
+            "reference": "2ece23e83f7e36e68b1e9784caaae1ff39c5a82b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">= 5.3.2",
+            "tracy/tracy": "~2.2"
+        },
+        "time": "2014-09-02 13:50:05",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "JanDrabek\\Tracy\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Vojtěch Vondra",
+                "homepage": "http://www.vojtechvondra.cz"
+            },
+            {
+                "name": "Jan Drábek",
+                "homepage": "http://www.jandrabek.cz"
+            }
+        ],
+        "description": "Tracy DebugBar panel displaying current project git branch.",
+        "keywords": [
+            "branch",
+            "debug",
+            "git",
+            "log",
+            "nette"
+        ]
     }
 ]
