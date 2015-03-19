@@ -5,7 +5,6 @@ nbproject/
 # temp folders
 temp/*
 log/*
-www/webtemp/*
 
 # composer
 vendor/
