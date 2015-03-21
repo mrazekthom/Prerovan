@@ -5,6 +5,7 @@ namespace Prerovan\Presenters;
 use Nette,
 	Prerovan\Model;
 use Prerovan\Model\Repository\ArticleRepository;
+use Prerovan\Components\IListOfArticlesComponentFactory;
 
 /**
  * Homepage presenter.
@@ -14,11 +15,16 @@ class HomepagePresenter extends BasePresenter
     /** @var ArticleRepository @inject */
     public $AR;
 
+    /** @var  IListOfArticlesComponentFactory @inject */
+    public $ACF;
+
 	public function renderDefault()
 	{
-        dump($this->context->parameters);
-		$this->template->anyVariable = 'any value';
-        $this->template->foo = $this->AR->getNews();
+
 	}
+
+    public function createComponentListOfArticles(){
+        return $this->ACF->create(6);
+    }
 
 }
