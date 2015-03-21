@@ -26,6 +26,7 @@ session:
 services:
 	- Prerovan\Model\UserManager
 	- Prerovan\Forms\SignFormFactory
+	- Prerovan\Misc\FilterLoader
 	router: Prerovan\RouterFactory::createRouter
 
 	# lean mapper
@@ -34,6 +35,11 @@ services:
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
+
+	# component factories
+	- implement: Prerovan\Components\IListOfArticlesComponentFactory
+	  parameters: [count]
+	  arguments: [%count%]
 
 extensions:
     leanMapper: Minicup\Model\LeanMapperExtension
