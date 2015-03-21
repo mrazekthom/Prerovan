@@ -6,14 +6,14 @@ use LeanMapper\Entity;
 
 
 /**
- * @property int       $id          testasf
- * @property string    $URL
- * @property string    $section
- * @property string    $title
- * @property string    $content
- * @property string    $writer
- * @property boolean   $conformed
- * @property \Datetime $inserted
+ * @property int                  $id
+ * @property string               $slug
+ * @property Tag                  $tag_id m:hasOne()
+ * @property string               $title
+ * @property string|NULL          $content
+ * @property User                 $user_id m:hasOne()
+ * @property \Datetime|NULL       $conformed
+ * @property \Datetime            $inserted
  */
 class Article extends Entity
 {
