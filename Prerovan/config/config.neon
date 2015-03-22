@@ -40,6 +40,10 @@ services:
 	- implement: Prerovan\Components\IListOfArticlesComponentFactory
 	  parameters: [count]
 	  arguments: [%count%]
+	- implement: Prerovan\Components\IListOfRssFeedComponentFactory
+	  parameters: [rssChannel]
+	  arguments: [%rssChannel%]
 
 extensions:
     leanMapper: Minicup\Model\LeanMapperExtension
+    curl: Kdyby\Curl\DI\CurlExtension

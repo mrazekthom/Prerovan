@@ -3,8 +3,9 @@
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.3.0",
         "tharos/leanmapper": "~2.2",
-        "jsmitka/nette-xdebug-helper": "dev-master"
+        "jsmitka/nette-xdebug-helper": "dev-master",
+        "kdyby/curl": "dev-master"
 	},
     "minimum-stability": "beta",
-    "prefer-stable": true,
+    "prefer-stable": true
 }
