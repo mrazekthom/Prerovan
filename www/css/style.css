@@ -12,12 +12,12 @@
     float: left;
 }
 
-#sideBanner{
+#asideBanner{
     width: 160px;
     float: left;
 }
 
-#sideBanner img{
+#asideBanner img{
     width: 140px;
     height: 170px;
     padding: 0 0 5px 20px;
@@ -55,13 +55,13 @@
     margin: 0 0 10px 0;
 }
 
-#sideContent{
+#asideContent{
     width: 200px;
     margin-left: 24px;
     float: left;
 }
 
-#sideContent ul{
+#asideContent ul{
     width: calc(100% - 2px);
     margin-bottom: 5px;
     border-width: 1px;
@@ -69,13 +69,13 @@
     border-color: #1935a3;
 }
 
-#sideContent ul li{
+#asideContent ul li{
     margin: 5px 0 5px 10px;
     font-size: 15px;
     color: #1935a3;
 }
 
-#sideContent img{
+#asideContent img{
     margin: 5px 0;
 }
 

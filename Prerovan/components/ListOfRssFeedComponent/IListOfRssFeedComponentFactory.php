@@ -5,9 +5,9 @@ namespace Prerovan\Components;
 interface IListOfRssFeedComponentFactory{
 
     /**
-     * @param $rssChannel
+     * @param $rssCategory
      * @return ListOfRssFeedComponent
      */
-    public function create($rssChannel);
+    public function create($rssCategory);
 
 }

@@ -3,38 +3,26 @@
 namespace Prerovan\Components;
 
 use Kdyby\Curl;
+use Prerovan\Model\Manager\RssManager;
 
 class ListOfRssFeedComponent extends BaseComponent
 {
 
-    /** @var string $rssChannel */
-    private $rssChannel;
+    /** @var string $rssCategory */
+    private $rssCategory;
 
-    public function __construct($rssChannel)
+    /** @var  RssManager */
+    private $RM;
+
+    public function __construct($rssCategory, RssManager $RM)
     {
-        $this->rssChannel = $rssChannel;
+        $this->rssCategory = $rssCategory;
+        $this->RM = $RM;
     }
 
     public function render()
     {
-        $rssFeed = [];
-        $url = "http://www.aktualne.cz/mrss/"; # $rssChannel -> db -> url
-        $test = new Curl\Request($url);
-        try {
-            $response = $test->get();
-            $header = $response->getHeaders();
-            $response = $response->getResponse();
-        } catch (Curl\CurlException $e) {
-            dump($e->getMessage());
-        }
-        $xml = simplexml_load_string($response) or die("Error: Cannot create object");
-        foreach ($xml->channel->item as $item) {
-            $rssFeed[] = [
-                'title' => $item->title,
-                'slug' => $item->link
-            ];
-        }
-        $this->template->rssFeed = $rssFeed;
+        $this->template->rssFeed = $this->RM->getRss($this->rssCategory);
         $this->template->render();
     }
 
