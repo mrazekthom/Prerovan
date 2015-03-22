@@ -2,10 +2,12 @@
 
 namespace Prerovan\Presenters;
 
-use Nette,
-	Prerovan\Model;
-use Prerovan\Model\Repository\ArticleRepository;
+use Kdyby\Curl;
+use Nette;
 use Prerovan\Components\IListOfArticlesComponentFactory;
+use Prerovan\Components\IListOfRssFeedComponentFactory;
+use Prerovan\Model;
+use Prerovan\Model\Repository\ArticleRepository;
 
 /**
  * Homepage presenter.
@@ -16,15 +18,24 @@ class HomepagePresenter extends BasePresenter
     public $AR;
 
     /** @var  IListOfArticlesComponentFactory @inject */
-    public $ACF;
+    public $LOACF;
 
-	public function renderDefault()
-	{
+    /** @var  IListOfRssFeedComponentFactory @inject */
+    public $LORSCF;
 
-	}
+    public function renderDefault()
+    {
 
-    public function createComponentListOfArticles(){
-        return $this->ACF->create(6);
+    }
+
+    public function createComponentListOfArticles()
+    {
+        return $this->LOACF->create(6);
+    }
+
+    public function createComponentListOfRssFeedSport()
+    {
+        return $this->LORSCF->create('sport');
     }
 
 }
