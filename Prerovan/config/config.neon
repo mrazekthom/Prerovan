@@ -35,10 +35,12 @@ services:
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
-	- Prerovan\Model\Repository\RssfeedRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
+
+	# factory application logic
+	- Prerovan\Model\Factory\RssFactory
 
 	# component factories
 	- implement: Prerovan\Components\IListOfArticlesComponentFactory
