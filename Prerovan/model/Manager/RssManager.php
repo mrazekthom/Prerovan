@@ -35,12 +35,17 @@ class RssManager extends Object
         } catch (Curl\CurlException $e) {
             dump($e->getMessage());
         }
-        $xml = simplexml_load_string($response) or die("Error: Cannot create object");
+        #$xml = simplexml_load_string($response) or die("Error: Cannot create object");
+        $xml = new \SimpleXMLElement($response);
+        $bar = $xml->getNamespaces(true);
         for ($i = 0; $i <= 5; $i++){
-            $rssFeed[] = [
-                'title' => $xml->channel->item[$i]->title,
-                'slug' => $xml->channel->item[$i]->link
-            ];
+            if (isset($xml->channel->item[$i]->children($bar['szn'])->image)){
+                $rssFeed[] = [
+                    'title' => (string)$xml->channel->item[$i]->title,
+                    'url' => (string)$xml->channel->item[$i]->link,
+                    'image' => (string)$xml->channel->item[$i]->children($bar['szn'])->image
+                ];
+            }
         }
         return $rssFeed;
     }

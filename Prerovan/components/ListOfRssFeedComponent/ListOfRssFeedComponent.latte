@@ -1,3 +1,6 @@
 {foreach $rssFeed as $item}
-    <p><a href={$item['slug']}>{$item['title']}</a></p>
+    <p><a href={$item['url']}>{$item['title']}</a></p>
+    {ifset $item['image']}
+        <img src={$item['image']}>
+    {/ifset}
 {/foreach}
