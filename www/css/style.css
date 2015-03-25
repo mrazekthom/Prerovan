@@ -51,7 +51,7 @@
 
 #mainBanner{
     width: 100%;
-    height: 100px;
+    height: 120px;
     margin: 0 0 10px 0;
 }
 
@@ -107,4 +107,7 @@
 
 #Homepage{
     width: 100%;
+}
+
+#shelder{
 }

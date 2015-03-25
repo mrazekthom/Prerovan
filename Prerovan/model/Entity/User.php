@@ -11,6 +11,7 @@ use LeanMapper\Entity;
  * @property string      $password_hash
  * @property string      $role
  * @property string      $full_name
+ * @property Article[]   $articles m:belongsToMany()
  */
 class User extends Entity
 {

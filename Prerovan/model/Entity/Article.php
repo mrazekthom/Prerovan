@@ -11,7 +11,7 @@ use LeanMapper\Entity;
  * @property Tag                  $tag_id m:hasOne()
  * @property string               $title
  * @property string|NULL          $content
- * @property User                 $user_id m:hasOne()
+ * @property User                 $user m:hasOne()
  * @property \Datetime|NULL       $conformed
  * @property \Datetime            $inserted
  */
