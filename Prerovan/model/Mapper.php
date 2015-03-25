@@ -5,7 +5,9 @@ namespace Prerovan\Model;
 use LeanMapper\Caller;
 use LeanMapper\DefaultMapper;
 use LeanMapper\Exception\InvalidStateException;
+use LeanMapper\ImplicitFilters;
 use LeanMapper\Row;
+use Prerovan\Model\Entity\Article;
 
 class Mapper extends DefaultMapper
 {
@@ -61,7 +63,9 @@ class Mapper extends DefaultMapper
 
     public function getImplicitFilters($entityClass, Caller $caller = null)
     {
-        $entityName = $this->trimNamespace($entityClass);
+        if ($entityClass === Article::class) {
+            return new ImplicitFilters(["confirmedArticle", "limit"]);
+        }
         return array();
     }
 

@@ -32,6 +32,12 @@ services:
 	# lean mapper
 	- LeanMapper\DefaultEntityFactory
 	- Prerovan\Model\Mapper(%LMEnamespace%)
+	filters: Prerovan\Model\Filters
+
+	leanMapper.connection:
+		setup:
+			- registerFilter(confirmedArticle, [@filters, confirmedArticle])
+			- registerFilter(limit, [@filters, limit])
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository

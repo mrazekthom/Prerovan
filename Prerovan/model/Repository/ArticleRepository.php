@@ -7,7 +7,7 @@ class ArticleRepository extends BaseRepository
 {
     public function getArticles()
     {
-        $fluent = $this->createFluent()->where('confirmed = 1');
+        $fluent = $this->createFluent()->applyFilter("limit", 10);
         $fluent = $fluent->fetchAll();
         return $this->createEntities($fluent);
     }
