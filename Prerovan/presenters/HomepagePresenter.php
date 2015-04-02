@@ -35,7 +35,17 @@ class HomepagePresenter extends BasePresenter
 
     public function createComponentListOfRssFeedSport()
     {
+        return $this->LORSCF->create(Model\Factory\RssFactory::SPORT);
+    }
+
+    public function createComponentListOfRssFeedNews()
+    {
         return $this->LORSCF->create(Model\Factory\RssFactory::NEWS);
+    }
+
+    public function createComponentListOfRssFeedBoulevard()
+    {
+        return $this->LORSCF->create(Model\Factory\RssFactory::BOULEVARD);
     }
 
 }

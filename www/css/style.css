@@ -109,5 +109,42 @@
     width: 100%;
 }
 
-#shelder{
+.ListOfRssFeedComponent{
+    padding: 20px 0;
+    height: 100px;
+}
+
+.ListOfRssFeedComponent .blue{
+    margin: 2px 0;
+    color: #1935a3;
+    height: 5px;
+}
+
+.ListOfRssFeedComponent .NameOfRss{
+    color: #1935a3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ListOfRssFeedComponent .item{
+    float: left;
+    margin: 0 0 5px;
+}
+
+.ListOfRssFeedComponent .item img{
+    margin: 0 5px 0 0;
+    float: left;
+    height: 56px;
+}
+
+.ListOfRssFeedComponent .item a{
+    font-weight: bold;
+    color: #D51616;
+}
+
+.ListOfRssFeedComponent .item a:hover{
+    color: red;
+}
+
+.ListOfRssFeedComponent .item .RssFirstItem{
 }

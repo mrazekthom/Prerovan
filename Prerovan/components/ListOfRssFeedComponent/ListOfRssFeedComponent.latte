@@ -1,7 +1,17 @@
-{foreach $rssFeed as $item}
-    <p><a href={$item['url']}>{$item['title']}</a></p>
-    {first}
-        <div>{$item['description']|noescape}</div>
-        <img src={$item['image']}>
-    {/first}
-{/foreach}
+<div class='ListOfRssFeedComponent'>
+    <span class='NameOfRss'>{$name}.cz</span>
+    <hr class='blue'>
+    {foreach $rssFeed as $item}
+        <div class='item'>
+            {first}
+                <img src={$item['image']}>
+                <div class='RssFirstItem'>
+            {/first}
+            <a href={$item['url']} target="_blank" >{$item['title']}</a>
+            {first}
+                <p><div class='RssItemDescription'>{$item['description']|noescape|truncate:150}</div></p>
+                </div>
+            {/first}
+        </div>
+    {/foreach}
+</div>

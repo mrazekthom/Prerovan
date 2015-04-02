@@ -22,7 +22,9 @@ class ListOfRssFeedComponent extends BaseComponent
 
     public function render()
     {
-        $this->template->rssFeed = $this->RM->getRss($this->rssCategory);
+        $rssFeed = $this->RM->getRss($this->rssCategory);
+        $this->template->rssFeed = $rssFeed['rssFeed'];
+        $this->template->name = $rssFeed['name'];
         $this->template->render();
     }
 

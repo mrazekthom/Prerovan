@@ -60,13 +60,15 @@ class RssFactory extends Object
     {
         $namespace = $xml->getNamespaces(true);
         for ($i = 0; $i <= 2; $i++) {
-            $rssSportFeed[] = [
+            $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
                 'description' => (string)$xml->channel->item[$i]->description,
                 'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image
             ];
         }
+        $rssSportFeed['rssFeed'] = $rssFeed;
+        $rssSportFeed['name'] = 'Sport';
         return $rssSportFeed;
     }
 
@@ -75,13 +77,15 @@ class RssFactory extends Object
     {
         $namespace = $xml->getNamespaces(true);
         for ($i = 0; $i <= 2; $i++) {
-            $rssBoulevardFeed[] = [
+            $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
                 'description' => (string)$xml->channel->item[$i]->description,
                 'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image
             ];
         }
+        $rssBoulevardFeed['rssFeed'] = $rssFeed;
+        $rssBoulevardFeed['name'] = 'Super';
         return $rssBoulevardFeed;
     }
 
