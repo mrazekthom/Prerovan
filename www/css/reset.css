@@ -48,3 +48,8 @@ hr{
     border-width: 0px;
     margin: 0 0;
 }
+
+a{
+    color: black;
+    text-decoration: none;
+}
