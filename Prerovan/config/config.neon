@@ -41,9 +41,12 @@ services:
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
+	- Prerovan\Model\Repository\ArticlesRepository
+	- Prerovan\Model\Repository\AktualityRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
+	- Prerovan\Model\Manager\MigrateManager
 
 	# factory application logic
 	- Prerovan\Model\Factory\RssFactory

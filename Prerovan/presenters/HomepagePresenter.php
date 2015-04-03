@@ -7,15 +7,16 @@ use Nette;
 use Prerovan\Components\IListOfArticlesComponentFactory;
 use Prerovan\Components\IListOfRssFeedComponentFactory;
 use Prerovan\Model;
-use Prerovan\Model\Repository\ArticleRepository;
+use Prerovan\Model\Manager\MigrateManager;
 
 /**
  * Homepage presenter.
  */
 class HomepagePresenter extends BasePresenter
 {
-    /** @var ArticleRepository @inject */
-    public $AR;
+
+    /** @var  MigrateManager @inject */
+    public $MM;
 
     /** @var  IListOfArticlesComponentFactory @inject */
     public $LOACF;
@@ -25,7 +26,7 @@ class HomepagePresenter extends BasePresenter
 
     public function renderDefault()
     {
-
+        #$this->MM->migrate();
     }
 
     public function createComponentListOfArticles()

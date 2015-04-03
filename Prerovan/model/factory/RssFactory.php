@@ -17,7 +17,6 @@ class RssFactory extends Object
     {
 
         $url = $rssFeed;
-        $rssNewsFeed = [];
         $request = new Curl\Request($url);
         try {
             $response = $request->get();
