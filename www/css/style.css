@@ -146,5 +146,34 @@
     color: red;
 }
 
-.ListOfRssFeedComponent .item .RssFirstItem{
+.articles .prerovanNews{
+    color: #1935a3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.articles .blue{
+    margin: 2px 0;
+    color: #1935a3;
+    height: 5px;
+}
+
+.articles p{
+    margin: 4px 0 4px 5px;
+}
+
+.articles p a{
+    font-weight: bold;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.articles p a:hover{
+    color: red;
+}
+
+.articles p .inserted{
+    margin: 0 0 0 5px;
+    color: #999999;
+    font-size: 11px;
 }

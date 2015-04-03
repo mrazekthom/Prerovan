@@ -1,3 +1,7 @@
-{foreach $articles as $article}
-    <p>{$article->title}</p>
-{/foreach}
+<div class="articles">
+    <span class="prerovanNews">Prerovan aktuality</span>
+    <hr class='blue'>
+    {foreach $articles as $article}
+        <p><a href="">{$article->title}</a><span class="inserted">({$article->inserted|date:'j. n. Y'})</span></p>
+    {/foreach}
+</div>
