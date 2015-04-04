@@ -159,13 +159,13 @@
 }
 
 .articles p{
-    margin: 4px 0 4px 5px;
+    margin: 7px 0 7px 5px;
 }
 
 .articles p a{
-    font-weight: bold;
     color: dodgerblue;
     text-decoration: underline;
+    letter-spacing: 1px;
 }
 
 .articles p a:hover{
@@ -176,4 +176,23 @@
     margin: 0 0 0 5px;
     color: #999999;
     font-size: 11px;
+}
+
+.nextArticles a{
+    font-size: 20px;
+    color: #1935a3;
+}
+
+.nextArticles a:hover{
+    color: red;
+}
+
+#shelder{
+    width: 200px;
+    height: 150px;
+}
+
+#time_banner{
+    width: 200px;
+    height: 250px;
 }

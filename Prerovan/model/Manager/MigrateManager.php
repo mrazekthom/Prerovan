@@ -5,19 +5,19 @@ namespace Prerovan\Model\Manager;
 use Nette\Object;
 use Prerovan\Model\Entity\Articles;
 use Prerovan\Model\Repository\AktualityRepository;
-use Prerovan\Model\Repository\ArticlesRepository;
+use Prerovan\Model\Repository\ArticleRepository;
 use Nette\Utils\Strings;
 
 class MigrateManager extends Object
 {
 
-    /** @var ArticlesRepository */
+    /** @var ArticleRepository */
     public $AsR;
 
     /** @var AktualityRepository */
     public $AkR;
 
-    public function __construct(ArticlesRepository $AsR, AktualityRepository $AkR){
+    public function __construct(ArticleRepository $AsR, AktualityRepository $AkR){
         $this->AsR = $AsR;
         $this->AkR = $AkR;
     }
@@ -26,7 +26,7 @@ class MigrateManager extends Object
         $entities = $this->AkR->migrate();
 
         foreach ($entities as $e){
-            $newArticle = new Articles;
+            $newArticle = new Article;
 
             if ($e->typ == "URL"){
                 $newArticle->title = $e->titulek;

@@ -41,7 +41,6 @@ services:
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
-	- Prerovan\Model\Repository\ArticlesRepository
 	- Prerovan\Model\Repository\AktualityRepository
 
     # manager application logic

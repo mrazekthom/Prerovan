@@ -2,18 +2,18 @@
 
 namespace Prerovan\Components;
 
-use Prerovan\Model\Repository\ArticlesRepository;
+use Prerovan\Model\Repository\ArticleRepository;
 
 class ListOfArticlesComponent extends BaseComponent
 {
 
-    /** @var ArticlesRepository */
+    /** @var ArticleRepository */
     private $AR;
 
     /** @var int $count */
     private $count;
 
-    public function __construct($count, ArticlesRepository $AR)
+    public function __construct($count, ArticleRepository $AR)
     {
         $this->AR = $AR;
         $this->count = $count;

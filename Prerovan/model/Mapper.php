@@ -63,7 +63,8 @@ class Mapper extends DefaultMapper
 
     public function getImplicitFilters($entityClass, Caller $caller = null)
     {
-        if ($entityClass === Article::class) {
+        $entityName = $this->trimNamespace($entityClass);
+        if ($entityName === "Article") {
             return new ImplicitFilters(["confirmedArticle", "limit"]);
         }
         return array();

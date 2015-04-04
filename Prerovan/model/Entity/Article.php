@@ -7,13 +7,13 @@ use LeanMapper\Entity;
 
 /**
  * @property int                  $id
- * @property string               $slug
- * @property Tag                  $tag_id m:hasOne()
  * @property string               $title
+ * @property string               $type
  * @property string|NULL          $content
- * @property User                 $user m:hasOne()
- * @property \Datetime|NULL       $conformed
+ * @property string|NULL          $url
+ * @property string|NULL          $image
  * @property \Datetime            $inserted
+ * @property boolean              $confirmed
  */
 class Article extends Entity
 {
