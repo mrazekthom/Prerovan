@@ -55,8 +55,8 @@ services:
 	  parameters: [count]
 	  arguments: [%count%]
 	- implement: Prerovan\Components\IListOfRssFeedComponentFactory
-	  parameters: [rssCategory]
-	  arguments: [%rssCategory%]
+	  parameters: [rssCategory, count]
+	  arguments: [%rssCategory%, %count%]
 
 extensions:
     leanMapper: Minicup\Model\LeanMapperExtension

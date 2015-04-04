@@ -110,8 +110,8 @@
 }
 
 .ListOfRssFeedComponent{
-    padding: 20px 0;
-    height: 100px;
+    padding: 5px 0;
+    float: left;
 }
 
 .ListOfRssFeedComponent .blue{
@@ -144,6 +144,10 @@
 
 .ListOfRssFeedComponent .item a:hover{
     color: red;
+}
+
+.articles{
+    margin: 0 0 10px;
 }
 
 .articles .prerovanNews{
@@ -192,7 +196,7 @@
     height: 150px;
 }
 
-#time_banner{
+#timeChangeBanner{
     width: 200px;
     height: 250px;
 }

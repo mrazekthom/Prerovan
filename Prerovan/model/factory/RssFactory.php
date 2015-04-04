@@ -14,7 +14,9 @@ class RssFactory extends Object
     const BOULEVARD = "http://www.super.cz/rss2";
     const STREAM = "";
 
-    public function generate($rssFeed)
+    private $count;
+
+    public function generate($rssFeed, $count)
     {
 
         $url = $rssFeed;
@@ -27,6 +29,7 @@ class RssFactory extends Object
             throw $e;
 
         }
+        $this->count = $count;
         $xml =  new \SimpleXMLElement($response);
 
         if ($rssFeed == static::NEWS) {
@@ -43,7 +46,7 @@ class RssFactory extends Object
     private function generateNewsFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
-        for ($i = 0; $i <= 2; $i++) {
+        for ($i = 0; $i <= $this->count - 1; $i++) {
             $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
@@ -59,7 +62,7 @@ class RssFactory extends Object
     private function generateSportFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
-        for ($i = 0; $i <= 2; $i++) {
+        for ($i = 0; $i <= $this->count - 1; $i++) {
             $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
@@ -76,7 +79,7 @@ class RssFactory extends Object
     private function generateBoulevardFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
-        for ($i = 0; $i <= 2; $i++) {
+        for ($i = 0; $i <= $this->count - 1; $i++) {
             $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,

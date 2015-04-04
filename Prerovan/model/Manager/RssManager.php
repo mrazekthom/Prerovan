@@ -16,9 +16,9 @@ class RssManager extends Object
         $this->RF = $RF;
     }
 
-    public function getRss($RssCategory)
+    public function getRss($RssCategory, $count)
     {
-        $rssFeed = $this->RF->generate($RssCategory);
+        $rssFeed = $this->RF->generate($RssCategory, $count);
         return $rssFeed;
     }
 
