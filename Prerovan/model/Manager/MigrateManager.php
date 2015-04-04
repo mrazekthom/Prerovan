@@ -12,13 +12,13 @@ class MigrateManager extends Object
 {
 
     /** @var ArticleRepository */
-    public $AsR;
+    public $AR;
 
     /** @var AktualityRepository */
     public $AkR;
 
-    public function __construct(ArticleRepository $AsR, AktualityRepository $AkR){
-        $this->AsR = $AsR;
+    public function __construct(ArticleRepository $AR, AktualityRepository $AkR){
+        $this->AR = $AR;
         $this->AkR = $AkR;
     }
 
@@ -35,7 +35,7 @@ class MigrateManager extends Object
                 $newArticle->url = NULL;
                 $newArticle->image = NULL;
                 $newArticle->confirmed = 1;
-                $this->AsR->persist($newArticle);
+                $this->AR->persist($newArticle);
             }elseif ($e->typ == "clanek"){
                 $newArticle->title = $e->titulek;
                 $newArticle->type = 'article';
@@ -47,7 +47,7 @@ class MigrateManager extends Object
                 $newArticle->url = NULL;
                 $newArticle->image = NULL;
                 $newArticle->confirmed = 1;
-                $this->AsR->persist($newArticle);
+                $this->AR->persist($newArticle);
             }
         }
     }
