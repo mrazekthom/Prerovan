@@ -4,6 +4,7 @@ namespace Prerovan\Model\Factory;
 
 use Kdyby\Curl;
 use Nette\Object;
+use Nette\Utils\Strings;
 
 class RssFactory extends Object
 {
@@ -79,7 +80,7 @@ class RssFactory extends Object
             $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
-                'description' => (string)$xml->channel->item[$i]->description,
+                'description' => Strings::replace((string)$xml->channel->item[$i]->description, "#<a[^>]*>([\s\S]*?)<\/a[^>]*>#"),
                 'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image
             ];
         }
