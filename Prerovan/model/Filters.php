@@ -12,7 +12,7 @@ class Filters extends Object{
      */
     public function confirmedArticle(Fluent $fluent)
     {
-        $fluent->where('[article.confirmed] = 1');
+        $fluent->where('[article.confirmed] = 1')->orderBy('inserted desc');
     }
 
     public function limit(Fluent $fluent, $limit = NULL)

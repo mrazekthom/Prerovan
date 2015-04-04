@@ -15,13 +15,13 @@ class ListOfArticlesComponent extends BaseComponent
 
     public function __construct($count, ArticleRepository $AR)
     {
-        $this->AR = $AR;
         $this->count = $count;
+        $this->AR = $AR;
     }
 
     public function render()
     {
-        $this->template->articles = $this->AR->getArticles();
+        $this->template->articles = $this->AR->getArticles($this->count);
         $this->template->render();
     }
 
