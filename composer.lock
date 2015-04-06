@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b68533d88419ed3fc0c2186dae8790a6",
+    "hash": "ea8ffbd2b1b21cd3c4d20408d8ca2e60",
     "packages": [
         {
             "name": "dg/dibi",
@@ -1308,6 +1308,62 @@
             "time": "2015-02-24 20:35:28"
         },
         {
+            "name": "nette/tester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tester.git",
+                "reference": "a3139819bb013256c7fc64fea37070102dab2c30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tester/zipball/a3139819bb013256c7fc64fea37070102dab2c30",
+                "reference": "a3139819bb013256c7fc64fea37070102dab2c30",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "Tester/tester"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "Tester/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "An easy-to-use PHP unit testing framework.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "nette",
+                "testing",
+                "unit"
+            ],
+            "time": "2015-03-18 16:32:50"
+        },
+        {
             "name": "nette/tokenizer",
             "version": "v2.2.0",
             "source": {
@@ -1521,7 +1577,8 @@
     "minimum-stability": "beta",
     "stability-flags": {
         "jsmitka/nette-xdebug-helper": 20,
-        "kdyby/curl": 20
+        "kdyby/curl": 20,
+        "nette/tester": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

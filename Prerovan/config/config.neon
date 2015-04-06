@@ -65,5 +65,5 @@ services:
 
 
 extensions:
-    leanMapper: Minicup\Model\LeanMapperExtension
+    leanMapper: Prerovan\Model\LeanMapperExtension
     curl: Kdyby\Curl\DI\CurlExtension

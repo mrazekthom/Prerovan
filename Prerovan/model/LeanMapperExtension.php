@@ -1,6 +1,6 @@
 <?php
 
-namespace Minicup\Model;
+namespace Prerovan\Model;
 
 use Nette\DI\CompilerExtension;
 
