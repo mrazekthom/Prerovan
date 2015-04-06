@@ -25,12 +25,6 @@ class HomepagePresenter extends BasePresenter
     /** @var  IListOfRssFeedComponentFactory @inject */
     public $LORSCF;
 
-    /** @var Model\Repository\BannersPhotoRepository @inject */
-    public $BPR;
-
-    /** @var ITimeChangeBannerComponentFactory @inject */
-    public $TCBPC;
-
     public function renderDefault()
     {
         #$this->MM->migrate();
@@ -56,10 +50,6 @@ class HomepagePresenter extends BasePresenter
         return $this->LORSCF->create(Model\Factory\RssFactory::BOULEVARD, 3);
     }
 
-    /***/
-    public function createComponentBannerComponent()
-    {
-        return $this->TCBPC->create($this->BPR->findAll(), 2);
-    }
+
 
 }

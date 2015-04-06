@@ -13,10 +13,14 @@ class TimeChangeBannerComponent extends BaseComponent {
     /** @var int */
     private $delay;
 
+    /**
+     * @param BannersPhoto[] $banners
+     * @param int $delay
+     */
     public function __construct(array $banners, $delay) {
+        shuffle($banners);
         $this->banners = $banners;
         $this->delay = $delay;
-
     }
 
     public function render() {
@@ -26,7 +30,7 @@ class TimeChangeBannerComponent extends BaseComponent {
             $banners[$banner->id] = $banner;
         }
         $this->template->banners = $banners;
-        $this->template->delay = $this->delay * 1000;
+        $this->template->delay = (int) ($this->delay * 1000);
         $this->template->render();
     }
 

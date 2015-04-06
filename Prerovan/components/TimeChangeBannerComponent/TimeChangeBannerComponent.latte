@@ -6,13 +6,14 @@
                 index = 0;
 
         var rotate = function () {
-            index += 1;
-            if (index-1 > banners.length) {
+            if (index+1 > banners.length) {
                 index -= banners.length;
             }
             $container.find('.banner').fadeOut();
             $container.find('.banner-' + banners[index]).fadeIn();
+            index += 1;
         };
+        rotate();
         setInterval(rotate, {$delay});
     });
 </script>
@@ -20,7 +21,6 @@
     .banners-container {
         width: 200px;
         height: 300px;
-        box-shadow: 0 0 5px black inset;
         position: relative;
         overflow: hidden;
         font-size: 0;
