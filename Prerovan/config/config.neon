@@ -43,6 +43,7 @@ services:
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
 	- Prerovan\Model\Repository\AktualityRepository
+	- Prerovan\Model\Repository\BannersPhotoRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
@@ -59,8 +60,8 @@ services:
 	  parameters: [rssCategory, count]
 	  arguments: [%rssCategory%, %count%]
 	- implement: Prerovan\Components\ITimeChangeBannerComponentFactory
-	  parameters: [array timeChangeBanner, time]
-	  arguments: [%timeChangeBanner%, %time%]
+	  parameters: [array banners, delay]
+	  arguments: [%banners%, %delay%]
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
 
 

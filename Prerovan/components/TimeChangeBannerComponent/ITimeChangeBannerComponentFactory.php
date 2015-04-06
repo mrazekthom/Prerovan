@@ -4,13 +4,13 @@ namespace Prerovan\Components;
 
 use Prerovan\Model\Entity\BannersPhoto;
 
-interface ITimeChangeBannerComponentFactory{
+interface ITimeChangeBannerComponentFactory {
 
     /**
-     * @param BannersPhoto[] $timeChangeBanner
-     * @param $time
+     * @param BannersPhoto[] $banners
+     * @param $delay
      * @return TimeChangeBannerComponent
      */
-    public function create(array $timeChangeBanner, $time);
+    public function create(array $banners, $delay);
 
 }

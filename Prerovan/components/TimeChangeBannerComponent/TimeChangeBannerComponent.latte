@@ -1,0 +1,44 @@
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+    jQuery(function ($) {
+        var banners = {array_keys($banners)},
+                $container = $('.banners-container-{$id|noescape}'),
+                index = 0;
+
+        var rotate = function () {
+            index += 1;
+            if (index-1 > banners.length) {
+                index -= banners.length;
+            }
+            $container.find('.banner').fadeOut();
+            $container.find('.banner-' + banners[index]).fadeIn();
+        };
+        setInterval(rotate, {$delay});
+    });
+</script>
+<style>
+    .banners-container {
+        width: 200px;
+        height: 300px;
+        box-shadow: 0 0 5px black inset;
+        position: relative;
+        overflow: hidden;
+        font-size: 0;
+    }
+    .banner {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .banners-container .banner img {
+        width: 200px;
+        height: 300px;
+    }
+</style>
+
+<div class="banners-container banners-container-{$id}"><!--
+--><div n:foreach="$banners as $banner" class="banner banner-{$banner->id}"><img src="{$basePath}/images/{$banner->folder}/{$banner->name}" alt=""/></div>
+</div>
