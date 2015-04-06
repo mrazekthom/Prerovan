@@ -147,6 +147,8 @@
 }
 
 .articles{
+    width: 100%;
+    float: left;
     margin: 0 0 10px;
 }
 
@@ -162,24 +164,35 @@
     height: 5px;
 }
 
-.articles p{
+.articles .listOfArticles p{
     margin: 7px 0 7px 5px;
 }
 
-.articles p a{
+.articles .listOfArticles p a{
     color: dodgerblue;
     text-decoration: underline;
     letter-spacing: 1px;
 }
 
-.articles p a:hover{
+.articles .listOfArticles p a:hover{
     color: red;
 }
 
-.articles p .inserted{
+.articles .listOfArticles p .inserted{
     margin: 0 0 0 5px;
     color: #999999;
     font-size: 11px;
+}
+
+.articles .listOfArticles{
+    float: left;
+}
+
+.articles img{
+    float: right;
+    margin: 0 0 0 0;
+    max-height: 150px;
+    max-width: 250px;
 }
 
 .nextArticles a{
