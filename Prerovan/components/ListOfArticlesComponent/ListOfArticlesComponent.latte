@@ -2,7 +2,7 @@
     <span class="prerovanNews">Prerovan aktuality</span>
     <hr class='blue'>
     {foreach $articles as $article}
-        <p><a href="">{$article->title}</a><span class="inserted">({$article->inserted|date:'j. n. Y'})</span></p>
+        <p><a href="">{$article->title|truncate:40}</a><span class="inserted">({$article->inserted|date:'j. n. Y'})</span></p>
     {/foreach}
     <div class="nextArticles"><a href="">Více z přerovských aktualit >> </a></div>
 </div>

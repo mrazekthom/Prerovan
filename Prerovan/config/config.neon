@@ -36,8 +36,9 @@ services:
 
 	leanMapper.connection:
 		setup:
-			- registerFilter(confirmedArticle, [@filters, confirmedArticle])
 			- registerFilter(limit, [@filters, limit])
+			- registerFilter(confirmedArticle, [@filters, confirmedArticle])
+			- registerFilter(confirmedPhoto, [@filters, confirmedPhoto])
 
     # repositories
 	- Prerovan\Model\Repository\ArticleRepository
@@ -58,8 +59,8 @@ services:
 	  parameters: [rssCategory, count]
 	  arguments: [%rssCategory%, %count%]
 	- implement: Prerovan\Components\ITimeChangeBannerComponentFactory
-	  parameters: [time]
-	  arguments: [%time%]
+	  parameters: [array timeChangeBanner, time]
+	  arguments: [%timeChangeBanner%, %time%]
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
 
 
