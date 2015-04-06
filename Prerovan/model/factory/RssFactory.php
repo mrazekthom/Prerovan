@@ -84,7 +84,7 @@ class RssFactory extends Object
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
                 'description' => Strings::replace((string)$xml->channel->item[$i]->description, "#<a[^>]*>([\s\S]*?)<\/a[^>]*>#"),
-                'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image
+                'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image // TODO: if image == NULL
             ];
         }
         $rssBoulevardFeed['rssFeed'] = $rssFeed;

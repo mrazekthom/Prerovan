@@ -57,6 +57,11 @@ services:
 	- implement: Prerovan\Components\IListOfRssFeedComponentFactory
 	  parameters: [rssCategory, count]
 	  arguments: [%rssCategory%, %count%]
+	- implement: Prerovan\Components\ITimeChangeBannerComponentFactory
+	  parameters: [time]
+	  arguments: [%time%]
+	- implement: Prerovan\Components\IRefreshBannerComponentFactory
+
 
 extensions:
     leanMapper: Minicup\Model\LeanMapperExtension
