@@ -1,6 +1,6 @@
 <div class="currency">
     <div class="currency-item" n:foreach="$currencies as $currency">
-        <span class='name'>{$currency['name']} </span>
+        <span class='name'><a href="http://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/{$currency['slug']}" target="_blank">{$currency['name']}</a> </span>
         <img src="{$basePath}/images/images_for_currency/{$currency['img']}">
         <span class='value'>{$currency['value']}</span>
         <img src="{$basePath}/images/images_for_currency/up.gif">

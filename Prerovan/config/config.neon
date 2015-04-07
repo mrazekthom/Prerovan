@@ -66,6 +66,7 @@ services:
 	  arguments: [%banners%, %delay%]
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
 	- implement: Prerovan\Components\ICurrencyComponentFactory
+	- implement: Prerovan\Components\ISurveyComponentFactory
 
 
 extensions:

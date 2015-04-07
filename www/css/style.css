@@ -217,6 +217,9 @@
 
 .currency{
     margin: 10px 0;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .currency .currency-item{
@@ -233,7 +236,7 @@
 
 .currency .currency-item .value{
     display: inline-block;
-    width: 55px;
+    width: 50px;
     text-align: right;
 }
 
