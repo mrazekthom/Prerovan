@@ -30,6 +30,9 @@
     </head>
 
     <body>
+    <div style="width: 60px; margin: auto; text-align: center;">
+    <script type="text/javascript" src="http://www.in-pocasi.cz/pocasi-na-web/pocasi-na-web.php?typ=simple&amp;layout=pruh&amp;region=7&amp;barva-den=2086c0&amp;barva-teplota=125b8b&amp;dni=1">
+    </script></div><br/>
 	    <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
         <div id="container">
 
@@ -61,7 +64,7 @@
                     </ul>
                     <img id="shelder" src="{$basePath}/images/shelter.jpg">
                     {control bannerComponent}
-                    <img src="{$basePath}/images/200x200.jpg">
+                    {control currencyComponent}
                     <img src="{$basePath}/images/200x200.jpg">
                 </div>
             </div>
@@ -85,6 +88,5 @@
             </div>
 
         </div>
-        {control currencyComponent}
     </body>
 </html>

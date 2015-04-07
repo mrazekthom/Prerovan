@@ -37,7 +37,7 @@ class CurrencyFactory extends Object
         foreach ($CZKValue as $name => $value){
             $result[] = [
                 'name' => $name,
-                'img' => Strings::lower($name . '.jpg'),
+                'img' => Strings::lower($name . '.gif'),
                 'slug' => Strings::lower($name),
                 'value' => $value
             ];
