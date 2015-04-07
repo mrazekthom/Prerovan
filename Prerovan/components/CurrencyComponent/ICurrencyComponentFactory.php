@@ -2,10 +2,10 @@
 
 namespace Prerovan\Components;
 
-interface IRefreshBannerComponentFactory{
+interface ICurrencyComponentFactory{
 
     /**
-     * @return RefreshBannerComponent
+     * @return CurrencyComponent
      */
     public function create();
 

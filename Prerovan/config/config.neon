@@ -47,10 +47,12 @@ services:
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
+	- Prerovan\Model\Manager\CurrencyManager
 	- Prerovan\Model\Manager\MigrateManager
 
 	# factory application logic
 	- Prerovan\Model\Factory\RssFactory
+	- Prerovan\Model\Factory\CurrencyFactory
 
 	# component factories
 	- implement: Prerovan\Components\IListOfArticlesComponentFactory
@@ -63,6 +65,7 @@ services:
 	  parameters: [array banners, delay]
 	  arguments: [%banners%, %delay%]
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
+	- implement: Prerovan\Components\ICurrencyComponentFactory
 
 
 extensions:

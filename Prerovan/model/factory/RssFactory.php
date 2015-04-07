@@ -18,7 +18,6 @@ class RssFactory extends Object
 
     public function generate($rssFeed, $count)
     {
-
         $url = $rssFeed;
         $request = new Curl\Request($url);
         try {
@@ -27,8 +26,8 @@ class RssFactory extends Object
             $response = $response->getResponse();
         } catch (Curl\CurlException $e) {
             throw $e;
-
         }
+
         $this->count = $count;
         $xml =  new \SimpleXMLElement($response);
 

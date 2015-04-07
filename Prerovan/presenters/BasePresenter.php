@@ -5,6 +5,7 @@ namespace Prerovan\Presenters;
 use Nette\Application\UI\Multiplier;
 use Nette\Application\UI\Presenter;
 use Prerovan\Components\ITimeChangeBannerComponentFactory;
+use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Model;
 
 
@@ -19,12 +20,15 @@ abstract class BasePresenter extends Presenter {
     /** @var ITimeChangeBannerComponentFactory @inject */
     public $TCBPC;
 
-    /**
-     * @return Multiplier
-     */
+    /** @var ICurrencyComponentFactory @inject */
+    public $CCF;
+
+
     public function createComponentBannerComponent() {
-        return new Multiplier(function($i) {
-            return $this->TCBPC->create($this->BPR->getTimeChangePhoto(), 2);
-        });
+        return $this->TCBPC->create($this->BPR->getTimeChangePhoto(), 2);
+    }
+
+    public function createComponentCurrencyComponent(){
+        return $this->CCF->create();
     }
 }
