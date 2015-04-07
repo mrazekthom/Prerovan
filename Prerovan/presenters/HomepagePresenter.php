@@ -6,6 +6,7 @@ use Kdyby\Curl;
 use Nette;
 use Prerovan\Components\IListOfArticlesComponentFactory;
 use Prerovan\Components\IListOfRssFeedComponentFactory;
+use Prerovan\Components\ISurveyComponentFactory;
 use Prerovan\Components\ITimeChangeBannerComponentFactory;
 use Prerovan\Model;
 use Prerovan\Model\Manager\MigrateManager;
@@ -24,6 +25,9 @@ class HomepagePresenter extends BasePresenter
 
     /** @var  IListOfRssFeedComponentFactory @inject */
     public $LORSCF;
+
+    /** @var ISurveyComponentFactory @inject */
+    public $SCF;
 
     public function renderDefault()
     {
@@ -50,6 +54,7 @@ class HomepagePresenter extends BasePresenter
         return $this->LORSCF->create(Model\Factory\RssFactory::BOULEVARD, 3);
     }
 
-
-
+    public function createComponentSurveyComponent() {
+        return $this->SCF->create();
+    }
 }

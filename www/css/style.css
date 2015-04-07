@@ -250,3 +250,58 @@
 .currency .currency-item .percentil{
     color: red;
 }
+
+.Survey {
+    width: 200px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid darkBlue;
+}
+
+.Survey__name {
+    font-size: 24px;
+    margin-bottom: 1px;
+}
+
+.Survey__item {
+    margin: 2px 0 5px;
+}
+
+.Survey__item--name {
+    color: blue;
+    text-decoration: underline;
+}
+
+.Survey__item--bar {
+    height: 10px;
+}
+
+.Survey__item:nth-child(1) .Survey__item--bar {
+    background-color: #791e8c;
+    width: 74px;
+}
+
+.Survey__item:nth-child(2) .Survey__item--bar {
+    background-color: #028c29;
+    width: 165px;
+}
+
+.Survey__item:nth-child(3) .Survey__item--bar {
+    background-color: #feeaf0;
+    width: 86px;
+}
+
+.Survey__item:nth-child(4) .Survey__item--bar {
+    background-color: #73fe19;
+    width: 175px;
+}
+
+.Survey__item:nth-child(5) .Survey__item--bar {
+    background-color: #2ef211;
+    width: 74px;
+}
+
+.Survey__item:nth-child(6) .Survey__item--bar {
+    background-color: #d99030;
+    width: 5px;
+}
