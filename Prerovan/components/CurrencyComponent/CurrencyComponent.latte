@@ -1,1 +1,5 @@
-<p>{$currency}</p>
+<div>
+    <div n:foreach="$currencies as $currency">
+        <span class='name'>{$currency['name']} </span><span class='value'>{$currency['value']}</span>
+    </div>
+</div>

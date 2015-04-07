@@ -32,8 +32,18 @@ class CurrencyFactory extends Object
                 $CZKValue[$foo[3]] = $foo[4];
             }
         }
-        return($response);
 
+        $result = [];
+        foreach ($CZKValue as $name => $value){
+            $result[] = [
+                'name' => $name,
+                'img' => Strings::lower($name . '.jpg'),
+                'slug' => Strings::lower($name),
+                'value' => $value
+            ];
+        }
+
+        return($result);
     }
 
 }

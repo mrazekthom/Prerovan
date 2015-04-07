@@ -16,7 +16,7 @@ class CurrencyComponent extends BaseComponent
 
     public function render()
     {
-        $this->template->currency = $this->CM->getDailyCurrency();
+        $this->template->currencies = $this->CM->getDailyCurrency();
         $this->template->render();
     }
 
