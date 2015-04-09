@@ -38,8 +38,13 @@
     max-height: 46px;
 }
 
+#mainMenu ul li:hover{
+    background-color: #1935a3;
+    color: white;
+}
+
 #mainMenu ul li{
-    margin: 15px 25px;
+    padding: 15px 25px;
     font-size: 16px;
     color: #1935a3;
     float: left;
@@ -71,9 +76,14 @@
 }
 
 #asideContent ul li{
-    margin: 5px 0 5px 10px;
+    padding: 5px 0 5px 10px;
     font-size: 15px;
     color: #1935a3;
+}
+
+#asideContent ul li:hover{
+    background-color: #1935a3;
+    color: white;
 }
 
 #asideContent img{
@@ -192,8 +202,7 @@
 .articles img{
     float: right;
     margin: 0 0 0 0;
-    max-height: 150px;
-    max-width: 250px;
+    max-height: 170px;
 }
 
 .nextArticles a{
