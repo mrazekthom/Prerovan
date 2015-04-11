@@ -5,6 +5,7 @@ namespace Prerovan\Model\Factory;
 use Kdyby\Curl;
 use Nette\Object;
 use Nette\Utils\Strings;
+use Nette\Utils\DateTime;
 
 class CurrencyFactory extends Object
 {
@@ -28,7 +29,7 @@ class CurrencyFactory extends Object
         $CZKValue = [];
         foreach ($arrayOfCurrency as $currency){
             $foo = Strings::split($currency, '~["|"]~');
-            if (isset($foo[3]) and in_array($foo[3], $wantedCurrency)){
+            if (isset($foo[3]) && in_array($foo[3], $wantedCurrency)){
                 $CZKValue[$foo[3]] = $foo[4];
             }
         }

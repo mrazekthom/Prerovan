@@ -44,6 +44,7 @@ services:
 	- Prerovan\Model\Repository\ArticleRepository
 	- Prerovan\Model\Repository\AktualityRepository
 	- Prerovan\Model\Repository\BannersPhotoRepository
+	- Prerovan\Model\Repository\SurveyRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
