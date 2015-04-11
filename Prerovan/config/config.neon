@@ -68,6 +68,7 @@ services:
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
 	- implement: Prerovan\Components\ICurrencyComponentFactory
 	- implement: Prerovan\Components\ISurveyComponentFactory
+	- implement: Prerovan\Components\IAssideBannerComponentFactory
 
 
 extensions:

@@ -16,7 +16,7 @@ class BannersPhotoRepository extends BaseRepository
     public function getAssideBannerPhoto(){
         $fluent = $this->createFluent()
             ->where('[folder] = ?', "images_for_asside_banner")
-            ->orderBy('priority desc');
+            ->orderBy('priority asc');
         $fluent = $fluent->fetchAll();
         return $this->createEntities($fluent);
     }

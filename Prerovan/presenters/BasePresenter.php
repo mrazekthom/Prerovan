@@ -7,6 +7,7 @@ use Nette\Application\UI\Presenter;
 use Prerovan\Components\ITimeChangeBannerComponentFactory;
 use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Model;
+use Prerovan\Components\IAssideBannerComponentFactory;
 
 
 /**
@@ -20,9 +21,15 @@ abstract class BasePresenter extends Presenter {
     /** @var ITimeChangeBannerComponentFactory @inject */
     public $TCBPC;
 
+    /** @var IAssideBannerComponentFactory @inject */
+    public $ABCF;
+
     /** @var ICurrencyComponentFactory @inject */
     public $CCF;
 
+    public function createComponentAssideBannerComponent(){
+        return $this->ABCF->create();
+    }
 
     public function createComponentBannerComponent() {
         return $this->TCBPC->create($this->BPR->getTimeChangePhoto(), 2);
