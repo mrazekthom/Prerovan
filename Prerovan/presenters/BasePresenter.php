@@ -8,6 +8,7 @@ use Prerovan\Components\ITimeChangeBannerComponentFactory;
 use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Model;
 use Prerovan\Components\IAssideBannerComponentFactory;
+use Prerovan\Components\IRefreshBannerComponentFactory;
 
 
 /**
@@ -24,11 +25,18 @@ abstract class BasePresenter extends Presenter {
     /** @var IAssideBannerComponentFactory @inject */
     public $ABCF;
 
+    /** @var IRefreshBannerComponentFactory @inject */
+    public $RBCF;
+
     /** @var ICurrencyComponentFactory @inject */
     public $CCF;
 
     public function createComponentAssideBannerComponent(){
         return $this->ABCF->create();
+    }
+
+    public function createComponentRefreshBannerComponent(){
+        return $this->RBCF->create();
     }
 
     public function createComponentBannerComponent() {

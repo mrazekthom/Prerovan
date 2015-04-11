@@ -6,10 +6,11 @@ use Prerovan\Model\Repository\BannersPhotoRepository;
 
 class AssideBannerComponent extends BaseComponent
 {
-    /** @var  BannerPhotoRepository */
+    /** @var  BannersPhotoRepository */
     private $BPR;
 
-    public function __construct(BannersPhotoRepository $BPR){
+    public function __construct(BannersPhotoRepository $BPR)
+    {
         $this->BPR = $BPR;
     }
 
@@ -18,5 +19,4 @@ class AssideBannerComponent extends BaseComponent
         $this->template->banners = $this->BPR->getAssideBannerPhoto();
         $this->template->render();
     }
-
 }

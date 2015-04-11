@@ -45,15 +45,18 @@ services:
 	- Prerovan\Model\Repository\AktualityRepository
 	- Prerovan\Model\Repository\BannersPhotoRepository
 	- Prerovan\Model\Repository\SurveyRepository
+	- Prerovan\Model\Repository\RefreshBannerRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
 	- Prerovan\Model\Manager\CurrencyManager
 	- Prerovan\Model\Manager\MigrateManager
+	- Prerovan\Model\Manager\RefreshBannerManager
 
 	# factory application logic
 	- Prerovan\Model\Factory\RssFactory
 	- Prerovan\Model\Factory\CurrencyFactory
+	- Prerovan\Model\Factory\RefreshBannerFactory
 
 	# component factories
 	- implement: Prerovan\Components\IListOfArticlesComponentFactory

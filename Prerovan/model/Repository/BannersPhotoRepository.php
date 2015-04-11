@@ -21,4 +21,12 @@ class BannersPhotoRepository extends BaseRepository
         return $this->createEntities($fluent);
     }
 
+    public function getRefreshBannerPhoto(){
+        $fluent = $this->createFluent()
+            ->where('[folder] = ?', "images_for_refresh_banner")
+            ->orderBy('priority asc');
+        $fluent = $fluent->fetchAll();
+        return $this->createEntities($fluent);
+    }
+
 }
