@@ -18,8 +18,13 @@ class CurrencyManager extends Object
 
     public function getDailyCurrency()
     {
-        $dailyCurrency = $this->CF->dailyCurrency();
+        $dailyCurrency = $this->CF->dailyCurrency(1);
         return $dailyCurrency;
+    }
+
+    public function getYesterdayCurrency(){
+        $YesterdayCurrency = $this->CF->dailyCurrency(2);
+        return $YesterdayCurrency;
     }
 
 }

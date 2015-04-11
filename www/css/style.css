@@ -236,7 +236,7 @@
 
 .currency .currency-item .name{
     display: inline-block;
-    width: 35px;
+    width: 32px;
 }
 
 .currency .currency-item{
@@ -245,7 +245,7 @@
 
 .currency .currency-item .value{
     display: inline-block;
-    width: 50px;
+    width: 45px;
     text-align: right;
 }
 
@@ -257,7 +257,9 @@
 }
 
 .currency .currency-item .percentil{
-    color: red;
+    display: inline-block;
+    width: 45px;
+    text-align: right;
 }
 
 .Survey {

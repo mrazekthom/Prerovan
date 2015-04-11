@@ -10,13 +10,14 @@ use Nette\Utils\DateTime;
 class CurrencyFactory extends Object
 {
 
-    const CURRENCY = "http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt";
+    const CURRENCY = "http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt?date=";
 
-    public function dailyCurrency()
+    public function dailyCurrency($shift)
     {
         $wantedCurrency = ['USD', 'EUR', 'GBP', 'RUB', 'PLN', 'HRK'];
 
-        $url = $this::CURRENCY;
+        $day = date('d')-$shift;
+        $url = $this::CURRENCY . $day . date('.m.Y');
         $request = new Curl\Request($url);
         try {
             $response = $request->get();

@@ -3,7 +3,7 @@
         <span class='name'><a href="http://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/{$currency['slug']}" target="_blank">{$currency['name']}</a> </span>
         <img src="{$basePath}/images/images_for_currency/{$currency['img']}">
         <span class='value'>{$currency['value']}</span>
-        <img src="{$basePath}/images/images_for_currency/up.gif">
-        <span class="percentil"> -1,5%</span>
+        <img src="{$basePath}/images/images_for_currency/{if $currency['difference'] > 0}up{else}down{/if}.gif">
+        <span class="percentil" style='color:{if $currency['difference'] > 0}green{else}red{/if}'>{$currency['difference']}%</span>
     </div>
 </div>
