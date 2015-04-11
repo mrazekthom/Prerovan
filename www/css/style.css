@@ -263,56 +263,61 @@
 }
 
 .Survey {
-    width: 200px;
-    padding: 5px;
-    box-sizing: border-box;
-    border: 1px solid darkBlue;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid darkBlue;
 }
-
 .Survey__name {
-    font-size: 24px;
-    margin-bottom: 1px;
+  font-size: 24px;
 }
-
 .Survey__item {
-    margin: 2px 0 5px;
+  margin: 2px 0;
 }
-
 .Survey__item--name {
-    color: blue;
-    text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
+  position: relative;
 }
-
+.Survey__item--votes {
+  color: black;
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+}
 .Survey__item--bar {
-    height: 10px;
+  clear: both;
+  display: inline-block;
+  height: 10px;
 }
-
+.Survey__item--percents {
+  float: right;
+  margin-top: 3px;
+  font-size: 10px;
+}
 .Survey__item:nth-child(1) .Survey__item--bar {
-    background-color: #791e8c;
-    width: 74px;
+  background-color: #bf1732;
+  width: 175px;
 }
-
 .Survey__item:nth-child(2) .Survey__item--bar {
-    background-color: #028c29;
-    width: 165px;
+  background-color: #2f1148;
+  width: 175px;
 }
-
 .Survey__item:nth-child(3) .Survey__item--bar {
-    background-color: #feeaf0;
-    width: 86px;
+  background-color: #3a5d6c;
+  width: 175px;
 }
-
 .Survey__item:nth-child(4) .Survey__item--bar {
-    background-color: #73fe19;
-    width: 175px;
+  background-color: #a4ef23;
+  width: 175px;
 }
-
 .Survey__item:nth-child(5) .Survey__item--bar {
-    background-color: #2ef211;
-    width: 74px;
+  background-color: #2049b9;
+  width: 175px;
 }
-
 .Survey__item:nth-child(6) .Survey__item--bar {
-    background-color: #d99030;
-    width: 5px;
+  background-color: #a6a665;
+  width: 175px;
 }

@@ -1,7 +1,10 @@
 <div class="Survey">
     <div class="Survey__name">{$name}</div>
     <div class="Survey__item" n:foreach="$survey as $item">
-        <div class="Survey__item--name">{$item->name}</div>
+        <div class="Survey__item--name">{$item->name}
+        	<div class="Survey__item--votes">(358)</div>
+        </div>
         <div class="Survey__item--bar"></div>
+        <div class="Survey__item--percents">12%</div>
     </div>
 </div>
