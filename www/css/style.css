@@ -282,10 +282,8 @@
 .Survey__item--votes {
   color: black;
   font-size: 11px;
-  position: absolute;
-  top: 0;
-  right: 0;
   margin-top: 3px;
+  margin-left: 3px
 }
 .Survey__item--bar {
   clear: both;
