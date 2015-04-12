@@ -176,7 +176,7 @@
 }
 
 .articles .listOfArticles p{
-    margin: 7px 0 7px 5px;
+    margin: 7px 0 7px;
 }
 
 .articles .listOfArticles p a{
@@ -217,6 +217,9 @@
 #shelder{
     width: 200px;
     height: 150px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
 }
 
 #timeChangeBanner{
