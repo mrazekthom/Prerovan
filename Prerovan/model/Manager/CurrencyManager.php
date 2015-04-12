@@ -22,8 +22,11 @@ class CurrencyManager extends Object
         return $dailyCurrency;
     }
 
-    public function getYesterdayCurrency(){
-        $YesterdayCurrency = $this->CF->dailyCurrency(2);
+    public function getYesterdayCurrency($today, $shift = 2){
+        $YesterdayCurrency = $this->CF->dailyCurrency($shift);
+        if ($YesterdayCurrency == $today){
+            $YesterdayCurrency = $this->getYesterdayCurrency($today, $shift+1);
+        }
         return $YesterdayCurrency;
     }
 

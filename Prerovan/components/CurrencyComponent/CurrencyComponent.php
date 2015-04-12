@@ -17,7 +17,7 @@ class CurrencyComponent extends BaseComponent
 
     private function compareCurrency(){
         $today = $this->CM->getDailyCurrency();
-        $yesterday = $this->CM->getYesterdayCurrency();
+        $yesterday = $this->CM->getYesterdayCurrency($today);
         $currencies = [];
         for($i = 0; $i < 6; $i++){
             $currencies[] = [

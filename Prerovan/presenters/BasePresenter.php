@@ -9,6 +9,7 @@ use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Model;
 use Prerovan\Components\IAssideBannerComponentFactory;
 use Prerovan\Components\IRefreshBannerComponentFactory;
+use Prerovan\Components\IDayInfoComponentFactory;
 
 
 /**
@@ -30,6 +31,14 @@ abstract class BasePresenter extends Presenter {
 
     /** @var ICurrencyComponentFactory @inject */
     public $CCF;
+
+    /** @var IDayInfoComponentFactory @inject */
+    public $DICF;
+
+
+    public function createComponentDayInfoComponent(){
+        return $this->DICF->create();
+    }
 
     public function createComponentAssideBannerComponent(){
         return $this->ABCF->create();

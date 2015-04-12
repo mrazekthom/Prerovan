@@ -79,10 +79,12 @@ class RssFactory extends Object
     {
         $namespace = $xml->getNamespaces(true);
         for ($i = 0; $i <= $this->count - 1; $i++) {
+            $description = Strings::replace((string)$xml->channel->item[$i]->description, "#<a[^>]*>#");
+            $description = Strings::replace($description, "#<\/a[^>]*>#");
             $rssFeed[] = [
                 'title' => (string)$xml->channel->item[$i]->title,
                 'url' => (string)$xml->channel->item[$i]->link,
-                'description' => Strings::replace((string)$xml->channel->item[$i]->description, "#<a[^>]*>([\s\S]*?)<\/a[^>]*>#"),
+                'description' => $description,
                 'image' => (string)$xml->channel->item[$i]->children($namespace['szn'])->image // TODO: if image == NULL
             ];
         }

@@ -72,6 +72,7 @@ services:
 	- implement: Prerovan\Components\ICurrencyComponentFactory
 	- implement: Prerovan\Components\ISurveyComponentFactory
 	- implement: Prerovan\Components\IAssideBannerComponentFactory
+	- implement: Prerovan\Components\IDayInfoComponentFactory
 
 
 extensions:
