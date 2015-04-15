@@ -46,12 +46,14 @@ services:
 	- Prerovan\Model\Repository\BannersPhotoRepository
 	- Prerovan\Model\Repository\SurveyRepository
 	- Prerovan\Model\Repository\RefreshBannerRepository
+	- Prerovan\Model\Repository\SurveyVoteRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
 	- Prerovan\Model\Manager\CurrencyManager
 	- Prerovan\Model\Manager\MigrateManager
 	- Prerovan\Model\Manager\RefreshBannerManager
+	- Prerovan\Model\Manager\SurveyManager
 
 	# factory application logic
 	- Prerovan\Model\Factory\RssFactory

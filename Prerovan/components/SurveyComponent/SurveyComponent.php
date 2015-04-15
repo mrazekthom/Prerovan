@@ -3,6 +3,7 @@
 namespace Prerovan\Components;
 
 use Prerovan\Model\Repository\SurveyRepository;
+use Prerovan\Model\Manager\SurveyManager;
 
 class SurveyComponent extends BaseComponent
 {
@@ -10,8 +11,12 @@ class SurveyComponent extends BaseComponent
     /** @var  SurveyRepository */
     private $SR;
 
-    public function __construct(SurveyRepository $SR){
+    /** @var  SurveyManager */
+    private $SM;
+
+    public function __construct(SurveyRepository $SR, SurveyManager $SM){
         $this->SR = $SR;
+        $this->SM = $SM;
     }
 
     public function render()
@@ -28,9 +33,7 @@ class SurveyComponent extends BaseComponent
     }
 
     public function handleVote($id){
-        $vote = $this->SR->get($id);
-        $vote->counter += 1;
-        $this->SR->persist($vote);
+        $this->SM->vote($id);
         $this->presenter->redirect(":Homepage:default");
     }
 
