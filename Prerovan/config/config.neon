@@ -54,11 +54,13 @@ services:
 	- Prerovan\Model\Manager\MigrateManager
 	- Prerovan\Model\Manager\RefreshBannerManager
 	- Prerovan\Model\Manager\SurveyManager
+	- Prerovan\Model\Manager\DayInfoManager
 
 	# factory application logic
 	- Prerovan\Model\Factory\RssFactory
 	- Prerovan\Model\Factory\CurrencyFactory
 	- Prerovan\Model\Factory\RefreshBannerFactory
+	- Prerovan\Model\Factory\DayInfoFactory
 
 	# component factories
 	- implement: Prerovan\Components\IListOfArticlesComponentFactory
