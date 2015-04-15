@@ -4,7 +4,7 @@ namespace Prerovan\Model\Repository;
 
 class SurveyRepository extends BaseRepository
 {
-    public function ss()
+    public function actualSurvey()
     {
         $fluent = $this->createFluent()
             ->where('[survey_category.active] = %i', 1)

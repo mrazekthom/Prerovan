@@ -16,12 +16,22 @@ class SurveyComponent extends BaseComponent
 
     public function render()
     {
-        foreach ($this->SR->ss() as $item) {
+        $counter = 0;
+        foreach ($this->SR->actualSurvey() as $item) {
             $name = $item->surveyCategory->name;
+            $counter += $item->counter;
         }
         $this->template->name = $name;
-        $this->template->survey = $this->SR->ss();
+        $this->template->counter = $counter;
+        $this->template->survey = $this->SR->actualSurvey();
         $this->template->render();
+    }
+
+    public function handleVote($id){
+        $vote = $this->SR->get($id);
+        $vote->counter += 1;
+        $this->SR->persist($vote);
+        $this->presenter->redirect(":Homepage:default");
     }
 
 }

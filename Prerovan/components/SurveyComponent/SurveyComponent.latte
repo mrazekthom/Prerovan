@@ -2,10 +2,10 @@
     <div class="Survey__name">{$name}</div>
     <div class="Survey__item" n:foreach="$survey as $item">
         <div class="Survey__item--name">
-        	{$item->name}<!--
-         --><div class="Survey__item--votes">(358)</div>
+        	<a href={link vote! $item->id}>{$item->name}</a><!--
+         --><div class="Survey__item--votes">({$item->counter})</div>
         </div>
         <div class="Survey__item--bar"></div>
-        <div class="Survey__item--percents">12%</div>
+        <div class="Survey__item--percents">{100*$item->counter/$counter|substr:NULL, 2}%</div>
     </div>
 </div>
