@@ -10,7 +10,7 @@ class RefreshBannerRepository extends BaseRepository
     {
         $fluent = $this->createFluent()->orderBy('id desc');
         $row = $fluent->fetch();
-        return $row;
+        return $this->createEntity($row);
     }
 
 }

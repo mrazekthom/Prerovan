@@ -22,7 +22,7 @@ class RefreshBannerFactory extends Object
     }
 
     public function getNextRefreshBanner(){
-        $lastBannerID = $this->RBR->getLastShowBanner()->banners_photo_id;
+        $lastBannerID = $this->RBR->getLastShowBanner()->bannersPhoto->id;
         $banners = $this->BPR->getRefreshBannerPhoto();
         foreach ($banners as $banner){
             if ($banner->id == $lastBannerID){

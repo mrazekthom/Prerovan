@@ -8,7 +8,7 @@ class SurveyVoteRepository extends BaseRepository
     {
         $fluent = $this->createFluent()->where('[survey_vote.ip_address] = %i', $ip);
         $row = $fluent->fetch();
-        return $row;
+        return $this->createEntity($row);
 
     }
 }

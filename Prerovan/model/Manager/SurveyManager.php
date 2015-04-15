@@ -36,9 +36,11 @@ class SurveyManager extends Object
             $new->lastVote = DateTime::from('c');
             $this->SVR->persist($new);
             $this->SR->persist($vote);
-        }elseif ($voted->last_vote < DateTime::from('c')->modify('-1 hour')){
+        }elseif ($voted->lastVote < DateTime::from('c')->modify('-1 hour')){
             $vote = $this->SR->get($id);
             $vote->counter += 1;
+            $voted->counter += 1;
+            $this->SVR->persist($voted);
             $this->SR->persist($vote);
         }
     }
