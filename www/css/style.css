@@ -341,3 +341,34 @@
     background-color: #a6a665;
     width: 160px;
 }
+
+.day-info{
+    color: #1935a3;
+    font-size: 17px;
+    width: 300px;
+    margin: 30px 0 0;
+    float: right;
+}
+
+.day-info-information{
+    float: right;
+    text-align: right;
+}
+#ikal-jmena{
+    padding: 4px 0;
+}
+
+.day-info-image{
+    float: right;
+    margin: 5px 0 0 20px;
+}
+
+#top-banner{
+    margin: 20px 0 0;
+    width: 300px;
+    height: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: right;
+}

@@ -1,9 +1,14 @@
-<img src="{$basePath}/images/images_for_weather/{$weather['image']}">
-{$day}
-<div id="ikal-jmena"></div>
-<script type="text/javascript" src="http://www.ikal.cz/widget/kalendar-jmen.js.php"></script>
-<script type="text/javascript">
-    iKAL_JMENA.init('ctext: 000000, htext: 18, showcount: 1');
-    iKAL_JMENA.show();
-</script>
-<div class="weather">{$weather['status']}, {$weather['temperature']} °C</div>
+<div class="day-info">
+<img class="day-info-image" src="{$basePath}/images/images_for_weather/{$weather['image']}">
+    <div class="day-info-information">
+        {$day}
+        <div id="ikal-jmena"></div>
+        <script type="text/javascript" src="http://www.ikal.cz/widget/kalendar-jmen.js.php"></script>
+        <script type="text/javascript">
+            iKAL_JMENA.init('ctext: 1935a3, htext: 17, showcount: 1');
+            iKAL_JMENA.show();
+        </script>
+        <div class="weather">{$weather['status']}, {$weather['temperature']} °C</div>
+    </div>
+
+</div>

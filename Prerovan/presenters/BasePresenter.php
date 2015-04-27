@@ -10,6 +10,7 @@ use Prerovan\Model;
 use Prerovan\Components\IAssideBannerComponentFactory;
 use Prerovan\Components\IRefreshBannerComponentFactory;
 use Prerovan\Components\IDayInfoComponentFactory;
+use Prerovan\Components\ISurveyComponentFactory;
 
 
 /**
@@ -35,6 +36,8 @@ abstract class BasePresenter extends Presenter {
     /** @var IDayInfoComponentFactory @inject */
     public $DICF;
 
+    /** @var ISurveyComponentFactory @inject */
+    public $SCF;
 
     public function createComponentDayInfoComponent(){
         return $this->DICF->create();
@@ -55,4 +58,9 @@ abstract class BasePresenter extends Presenter {
     public function createComponentCurrencyComponent(){
         return $this->CCF->create();
     }
+
+    public function createComponentSurveyComponent() {
+        return $this->SCF->create();
+    }
+
 }
