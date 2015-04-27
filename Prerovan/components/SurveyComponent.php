@@ -38,3 +38,12 @@ class SurveyComponent extends BaseComponent
     }
 
 }
+
+interface ISurveyComponentFactory{
+
+    /**
+     * @return SurveyComponent
+     */
+    public function create();
+
+}

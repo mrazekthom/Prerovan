@@ -43,7 +43,7 @@ abstract class BaseComponent extends Control
         $template = $this->filterLoader->loadFilters(parent::createTemplate());
         $dir = $this->presenter->context->parameters['appDir'];
         $name = $this->reflection->shortName;
-        $template->setFile("$dir/components/$name/$name.latte");
+        $template->setFile("$dir/components/templates/$name.latte");
         return $template;
     }
 

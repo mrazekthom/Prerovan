@@ -20,3 +20,12 @@ class AssideBannerComponent extends BaseComponent
         $this->template->render();
     }
 }
+
+interface IAssideBannerComponentFactory{
+
+    /**
+     * @return AssideBannerComponent
+     */
+    public function create();
+
+}

@@ -20,3 +20,12 @@ class RefreshBannerComponent extends BaseComponent
     }
 
 }
+
+interface IRefreshBannerComponentFactory{
+
+    /**
+     * @return RefreshBannerComponent
+     */
+    public function create();
+
+}

@@ -26,3 +26,12 @@ class ListOfArticlesComponent extends BaseComponent
     }
 
 }
+
+interface IListOfArticlesComponentFactory
+{
+    /**
+     * @param $count
+     * @return ListOfArticlesComponent
+     */
+    public function create($count);
+}

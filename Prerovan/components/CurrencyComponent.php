@@ -45,3 +45,12 @@ class CurrencyComponent extends BaseComponent
     }
 
 }
+
+interface ICurrencyComponentFactory{
+
+    /**
+     * @return CurrencyComponent
+     */
+    public function create();
+
+}

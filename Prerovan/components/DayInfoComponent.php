@@ -22,3 +22,12 @@ class DayInfoComponent extends BaseComponent
     }
 
 }
+
+interface IDayInfoComponentFactory{
+
+    /**
+     * @return DayInfoComponent
+     */
+    public function create();
+
+}

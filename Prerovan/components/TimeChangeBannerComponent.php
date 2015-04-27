@@ -35,3 +35,14 @@ class TimeChangeBannerComponent extends BaseComponent {
     }
 
 }
+
+interface ITimeChangeBannerComponentFactory {
+
+    /**
+     * @param BannersPhoto[] $banners
+     * @param $delay
+     * @return TimeChangeBannerComponent
+     */
+    public function create(array $banners, $delay);
+
+}

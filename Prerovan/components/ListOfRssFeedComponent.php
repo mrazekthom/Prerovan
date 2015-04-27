@@ -33,3 +33,14 @@ class ListOfRssFeedComponent extends BaseComponent
     }
 
 }
+
+interface IListOfRssFeedComponentFactory{
+
+    /**
+     * @param $rssCategory
+     * @param $count
+     * @return ListOfRssFeedComponent
+     */
+    public function create($rssCategory, $count);
+
+}
