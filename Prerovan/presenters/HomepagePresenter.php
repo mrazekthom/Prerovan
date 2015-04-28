@@ -6,7 +6,6 @@ use Kdyby\Curl;
 use Nette;
 use Prerovan\Components\IListOfArticlesComponentFactory;
 use Prerovan\Components\IListOfRssFeedComponentFactory;
-use Prerovan\Components\ITimeChangeBannerComponentFactory;
 use Prerovan\Model;
 use Prerovan\Model\Manager\MigrateManager;
 

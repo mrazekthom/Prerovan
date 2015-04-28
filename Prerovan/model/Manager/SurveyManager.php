@@ -24,6 +24,11 @@ class SurveyManager extends Object
         $this->SVR = $SVR;
     }
 
+    /**
+     * Survey vote for
+     *
+     * @param $id
+     */
     public function vote($id)
     {
         $voted = $this->isVoted();
@@ -36,7 +41,7 @@ class SurveyManager extends Object
             $new->lastVote = DateTime::from('c');
             $this->SVR->persist($new);
             $this->SR->persist($vote);
-        }elseif ($voted->lastVote < DateTime::from('c')->modify('-1 hour')){
+        } elseif ($voted->lastVote < DateTime::from('c')->modify('-1 hour')) {
             $vote = $this->SR->get($id);
             $vote->counter += 1;
             $voted->counter += 1;
@@ -45,6 +50,11 @@ class SurveyManager extends Object
         }
     }
 
+    /**
+     * Verification if IP address vote
+     *
+     * @return mixed
+     */
     private function isVoted()
     {
         $result = $this->SVR->ipAddressVoted($_SERVER['REMOTE_ADDR']);

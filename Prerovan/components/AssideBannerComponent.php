@@ -21,7 +21,8 @@ class AssideBannerComponent extends BaseComponent
     }
 }
 
-interface IAssideBannerComponentFactory{
+interface IAssideBannerComponentFactory
+{
 
     /**
      * @return AssideBannerComponent

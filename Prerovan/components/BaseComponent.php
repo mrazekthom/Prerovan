@@ -3,9 +3,8 @@
 namespace Prerovan\Components;
 
 use Nette\Application\UI\Control;
-use Prerovan\Misc\FilterLoader;
 use Nette\Application\UI\Presenter;
-use Nette\Utils\Strings;
+use Prerovan\Misc\FilterLoader;
 
 abstract class BaseComponent extends Control
 {

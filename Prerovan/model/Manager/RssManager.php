@@ -16,6 +16,13 @@ class RssManager extends Object
         $this->RF = $RF;
     }
 
+    /**
+     * Get rss
+     *
+     * @param $RssCategory
+     * @param $count
+     * @return mixed|void
+     */
     public function getRss($RssCategory, $count)
     {
         $rssFeed = $this->RF->generate($RssCategory, $count);

@@ -9,7 +9,8 @@ class RefreshBannerComponent extends BaseComponent
     /** @var  RefreshBannerManager */
     private $RBM;
 
-    public function __construct(RefreshBannerManager $RBM){
+    public function __construct(RefreshBannerManager $RBM)
+    {
         $this->RBM = $RBM;
     }
 
@@ -21,7 +22,8 @@ class RefreshBannerComponent extends BaseComponent
 
 }
 
-interface IRefreshBannerComponentFactory{
+interface IRefreshBannerComponentFactory
+{
 
     /**
      * @return RefreshBannerComponent

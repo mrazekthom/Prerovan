@@ -2,8 +2,8 @@
 
 namespace Prerovan\Components;
 
-use Prerovan\Model\Repository\SurveyRepository;
 use Prerovan\Model\Manager\SurveyManager;
+use Prerovan\Model\Repository\SurveyRepository;
 
 class SurveyComponent extends BaseComponent
 {
@@ -14,7 +14,8 @@ class SurveyComponent extends BaseComponent
     /** @var  SurveyManager */
     private $SM;
 
-    public function __construct(SurveyRepository $SR, SurveyManager $SM){
+    public function __construct(SurveyRepository $SR, SurveyManager $SM)
+    {
         $this->SR = $SR;
         $this->SM = $SM;
     }
@@ -32,14 +33,16 @@ class SurveyComponent extends BaseComponent
         $this->template->render();
     }
 
-    public function handleVote($id){
+    public function handleVote($id)
+    {
         $this->SM->vote($id);
         $this->presenter->redirect(":Homepage:default");
     }
 
 }
 
-interface ISurveyComponentFactory{
+interface ISurveyComponentFactory
+{
 
     /**
      * @return SurveyComponent

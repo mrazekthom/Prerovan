@@ -2,21 +2,21 @@
 
 namespace Prerovan\Presenters;
 
-use Nette\Application\UI\Multiplier;
 use Nette\Application\UI\Presenter;
-use Prerovan\Components\ITimeChangeBannerComponentFactory;
-use Prerovan\Components\ICurrencyComponentFactory;
-use Prerovan\Model;
 use Prerovan\Components\IAssideBannerComponentFactory;
-use Prerovan\Components\IRefreshBannerComponentFactory;
+use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Components\IDayInfoComponentFactory;
+use Prerovan\Components\IRefreshBannerComponentFactory;
 use Prerovan\Components\ISurveyComponentFactory;
+use Prerovan\Components\ITimeChangeBannerComponentFactory;
+use Prerovan\Model;
 
 
 /**
  * Base presenter for all application presenters.
  */
-abstract class BasePresenter extends Presenter {
+abstract class BasePresenter extends Presenter
+{
 
     /** @var Model\Repository\BannersPhotoRepository @inject */
     public $BPR;
@@ -39,27 +39,33 @@ abstract class BasePresenter extends Presenter {
     /** @var ISurveyComponentFactory @inject */
     public $SCF;
 
-    public function createComponentDayInfoComponent(){
+    public function createComponentDayInfoComponent()
+    {
         return $this->DICF->create();
     }
 
-    public function createComponentAssideBannerComponent(){
+    public function createComponentAssideBannerComponent()
+    {
         return $this->ABCF->create();
     }
 
-    public function createComponentRefreshBannerComponent(){
+    public function createComponentRefreshBannerComponent()
+    {
         return $this->RBCF->create();
     }
 
-    public function createComponentBannerComponent() {
+    public function createComponentBannerComponent()
+    {
         return $this->TCBPC->create($this->BPR->getTimeChangePhoto(), 2);
     }
 
-    public function createComponentCurrencyComponent(){
+    public function createComponentCurrencyComponent()
+    {
         return $this->CCF->create();
     }
 
-    public function createComponentSurveyComponent() {
+    public function createComponentSurveyComponent()
+    {
         return $this->SCF->create();
     }
 

@@ -34,7 +34,8 @@ class ListOfRssFeedComponent extends BaseComponent
 
 }
 
-interface IListOfRssFeedComponentFactory{
+interface IListOfRssFeedComponentFactory
+{
 
     /**
      * @param $rssCategory

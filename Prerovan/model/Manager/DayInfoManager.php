@@ -16,7 +16,13 @@ class DayInfoManager extends Object
         $this->DIF = $DIF;
     }
 
-    public function getActualDay(){
+    /**
+     * Decode day from number
+     *
+     * @return string
+     */
+    public function getActualDay()
+    {
         $days = [
             'Neděle',
             'Pondělí',
@@ -47,7 +53,13 @@ class DayInfoManager extends Object
         return $day . ', ' . $numberOfDay . $month;
     }
 
-    public function getActualWeather(){
+    /**
+     * Get actual weather
+     *
+     * @return array
+     */
+    public function getActualWeather()
+    {
         return $this->DIF->actualWeather();
     }
 

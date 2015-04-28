@@ -16,7 +16,13 @@ class RefreshBannerManager extends Object
         $this->RBF = $RBF;
     }
 
-    public function getRefreshBanner(){
+    /**
+     * Get refresh banner
+     *
+     * @return mixed
+     */
+    public function getRefreshBanner()
+    {
         return $this->RBF->getNextRefreshBanner();
     }
 

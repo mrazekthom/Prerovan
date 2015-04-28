@@ -8,9 +8,10 @@ class DayInfoComponent extends BaseComponent
 {
 
     /** @var  DayInfoManager */
-    private  $DIM;
+    private $DIM;
 
-    public function __construct(DayInfoManager $DIM){
+    public function __construct(DayInfoManager $DIM)
+    {
         $this->DIM = $DIM;
     }
 
@@ -23,7 +24,8 @@ class DayInfoComponent extends BaseComponent
 
 }
 
-interface IDayInfoComponentFactory{
+interface IDayInfoComponentFactory
+{
 
     /**
      * @return DayInfoComponent

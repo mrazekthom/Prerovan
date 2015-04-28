@@ -11,15 +11,17 @@ class CurrencyComponent extends BaseComponent
     /** @var  CurrencyManager */
     public $CM;
 
-    public function __construct(CurrencyManager $CM){
+    public function __construct(CurrencyManager $CM)
+    {
         $this->CM = $CM;
     }
 
-    private function compareCurrency(){
+    private function compareCurrency()
+    {
         $today = $this->CM->getDailyCurrency();
         $yesterday = $this->CM->getYesterdayCurrency($today);
         $currencies = [];
-        for($i = 0; $i < 6; $i++){
+        for ($i = 0; $i < 6; $i++) {
             $currencies[] = [
                 'name' => $today[$i]['name'],
                 'img' => $today[$i]['img'],
@@ -31,7 +33,13 @@ class CurrencyComponent extends BaseComponent
         return $currencies;
     }
 
-    private function difference($today, $yesterday){
+    /**
+     * @param $today
+     * @param $yesterday
+     * @return float
+     */
+    private function difference($today, $yesterday)
+    {
         $today = (float)Strings::replace($today, '#,#', '.');
         $yesterday = (float)Strings::replace($yesterday, '#,#', '.');
         $difference = $today - $yesterday;
@@ -46,7 +54,8 @@ class CurrencyComponent extends BaseComponent
 
 }
 
-interface ICurrencyComponentFactory{
+interface ICurrencyComponentFactory
+{
 
     /**
      * @return CurrencyComponent

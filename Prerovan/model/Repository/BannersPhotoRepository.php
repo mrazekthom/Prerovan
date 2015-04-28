@@ -5,7 +5,11 @@ namespace Prerovan\Model\Repository;
 
 class BannersPhotoRepository extends BaseRepository
 {
-
+    /**
+     * Get photo for time change banner
+     *
+     * @return array
+     */
     public function getTimeChangePhoto()
     {
         $fluent = $this->createFluent()->where('[folder] = ?', "images_for_time_change_banner");
@@ -13,7 +17,13 @@ class BannersPhotoRepository extends BaseRepository
         return $this->createEntities($fluent);
     }
 
-    public function getAssideBannerPhoto(){
+    /**
+     * Get photo for asside banner
+     *
+     * @return array
+     */
+    public function getAssideBannerPhoto()
+    {
         $fluent = $this->createFluent()
             ->where('[folder] = ?', "images_for_asside_banner")
             ->orderBy('priority asc');
@@ -21,7 +31,13 @@ class BannersPhotoRepository extends BaseRepository
         return $this->createEntities($fluent);
     }
 
-    public function getRefreshBannerPhoto(){
+    /**
+     * Get photo for refresh banner
+     *
+     * @return array
+     */
+    public function getRefreshBannerPhoto()
+    {
         $fluent = $this->createFluent()
             ->where('[folder] = ?', "images_for_refresh_banner")
             ->orderBy('priority asc');
