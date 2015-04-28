@@ -3,12 +3,7 @@
 namespace Prerovan\Presenters;
 
 use Nette\Application\UI\Presenter;
-use Prerovan\Components\IAssideBannerComponentFactory;
-use Prerovan\Components\ICurrencyComponentFactory;
-use Prerovan\Components\IDayInfoComponentFactory;
-use Prerovan\Components\IRefreshBannerComponentFactory;
-use Prerovan\Components\ISurveyComponentFactory;
-use Prerovan\Components\ITimeChangeBannerComponentFactory;
+use Nette\Utils\Strings;
 use Prerovan\Model;
 
 
@@ -18,55 +13,48 @@ use Prerovan\Model;
 abstract class BasePresenter extends Presenter
 {
 
-    /** @var Model\Repository\BannersPhotoRepository @inject */
-    public $BPR;
-
-    /** @var ITimeChangeBannerComponentFactory @inject */
-    public $TCBPC;
-
-    /** @var IAssideBannerComponentFactory @inject */
-    public $ABCF;
-
-    /** @var IRefreshBannerComponentFactory @inject */
-    public $RBCF;
-
-    /** @var ICurrencyComponentFactory @inject */
-    public $CCF;
-
-    /** @var IDayInfoComponentFactory @inject */
-    public $DICF;
-
-    /** @var ISurveyComponentFactory @inject */
-    public $SCF;
-
-    public function createComponentDayInfoComponent()
+    /**
+     * Formats layout template file names.
+     * @return array
+     */
+    public function formatLayoutTemplateFiles()
     {
-        return $this->DICF->create();
+        $layout = $this->layout ? $this->layout : 'layout';
+        $dir = $this->context->parameters['appDir'];
+        $names = Strings::split($this->getName(), '(:)');
+        $module = $names[0];
+        $presenter = $names[1];
+        $dir = is_dir("$dir/templates") ? $dir : dirname($dir);
+        $list = array(
+            "$dir/templates/$module/@$layout.latte",
+            "$dir/templates/$module.@$layout.latte",
+        );
+        do {
+            $list[] = "$dir/templates/@$layout.latte";
+            $dir = dirname($dir);
+        } while ($dir && ($name = substr($presenter, 0, strrpos($presenter, ':'))));
+
+        return $list;
     }
 
-    public function createComponentAssideBannerComponent()
-    {
-        return $this->ABCF->create();
-    }
 
-    public function createComponentRefreshBannerComponent()
+    /**
+     * Formats view template file names.
+     * @return array
+     */
+    public function formatTemplateFiles()
     {
-        return $this->RBCF->create();
-    }
-
-    public function createComponentBannerComponent()
-    {
-        return $this->TCBPC->create($this->BPR->getTimeChangePhoto(), 2);
-    }
-
-    public function createComponentCurrencyComponent()
-    {
-        return $this->CCF->create();
-    }
-
-    public function createComponentSurveyComponent()
-    {
-        return $this->SCF->create();
+        $dir = $this->context->parameters['appDir'];
+        $names = Strings::split($this->getName(), '(:)');
+        $module = $names[0];
+        $presenter = $names[1];
+        $dir = is_dir("$dir/templates") ? $dir : dirname($dir);
+        $list = array(
+            "$dir/templates/$module.$presenter.$this->view.latte",
+            "$dir/templates/$module/$presenter.$this->view.latte",
+            "$dir/templates/$module/$presenter/$this->view.latte",
+        );
+        return $list;
     }
 
 }

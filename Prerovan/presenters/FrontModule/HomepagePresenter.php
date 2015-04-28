@@ -1,6 +1,6 @@
 <?php
 
-namespace Prerovan\Presenters;
+namespace Prerovan\FrontModule\Presenters;;
 
 use Kdyby\Curl;
 use Nette;
@@ -8,11 +8,12 @@ use Prerovan\Components\IListOfArticlesComponentFactory;
 use Prerovan\Components\IListOfRssFeedComponentFactory;
 use Prerovan\Model;
 use Prerovan\Model\Manager\MigrateManager;
+use Prerovan\Presenters\BasePresenter;
 
 /**
  * Homepage presenter.
  */
-class HomepagePresenter extends BasePresenter
+class HomepagePresenter extends BaseFrontPresenter
 {
 
     /** @var  MigrateManager @inject */

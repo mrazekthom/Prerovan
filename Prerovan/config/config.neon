@@ -47,6 +47,7 @@ services:
 	- Prerovan\Model\Repository\SurveyRepository
 	- Prerovan\Model\Repository\RefreshBannerRepository
 	- Prerovan\Model\Repository\SurveyVoteRepository
+	- Prerovan\Model\Repository\AdvertisingRepository
 
     # manager application logic
 	- Prerovan\Model\Manager\RssManager
@@ -77,6 +78,7 @@ services:
 	- implement: Prerovan\Components\ISurveyComponentFactory
 	- implement: Prerovan\Components\IAssideBannerComponentFactory
 	- implement: Prerovan\Components\IDayInfoComponentFactory
+	- implement: Prerovan\Components\IAdvertisingMainComponentFactory
 
 
 extensions:

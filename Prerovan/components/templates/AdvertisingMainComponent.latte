@@ -1,0 +1,8 @@
+<h2 id="advertising-item-title">NEJNOVĚJŠÍ INZERÁTY</h2>
+{foreach [0,1,2,3,4,5,6,7,8,9,10] as $_}
+<div class="advertising-item" n:foreach="$advertising as $item">
+    <span class="advertising-item-name">{$item->name|truncate:30}</span>
+    <span>{$item->description|truncate:35}</span>
+    <span class="advertising-item-inserted">vloženo {$item->inserted|relDate}</span>
+</div>
+{/foreach}

@@ -1,0 +1,46 @@
+#advertising-admin{
+    float: left;
+    margin: 0 0 5px;
+}
+
+#advertising-login{
+    float: left;
+    width: 214px;
+    height: 120px;
+    margin: 0 0 0 10px;
+}
+
+#advertising-login h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+
+}
+
+#advertising-item-title{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.advertising-item{
+    margin: 5px 0;
+    width: 638px;
+    padding: 3px 5px;
+    border-width: 1px 1px 1px 15px;
+    border-color: red;
+    border-style: solid;
+}
+
+.advertising-item-name{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-right: 10px;
+}
+
+.advertising-item-inserted{
+    float: right;
+}

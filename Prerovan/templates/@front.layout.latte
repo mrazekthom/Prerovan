@@ -1,0 +1,24 @@
+{extends '@layout.latte'}
+{block body}
+<div id="container">
+            {*{control dayInfoComponent}*}
+            <div id="top-banner"></div>
+
+            <img id="header" src="{$basePath}/images/header.jpg">
+            <hr class="blue">
+
+            {block box}{/block}
+
+            {control assideBannerComponent}
+
+            <div id="footer">
+                <ul>
+                    <li>ADMINISTRACE</li>
+                    <li>CENÍK REKLAMNÍCH PLOCH</li>
+                    <li>KONTAKTNÍ INFORMACE</li>
+                    <li>OCHRANA INFORMACÍ</li>
+                    <li>COPYRIGHT 2006 - 2015</li>
+                </ul>
+            </div>
+        </div>
+{/block}
