@@ -7,17 +7,20 @@
 <html>
     <head>
 	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	    <title>Přerovan{ifset title} | {include title|striptags}{/ifset}</title>
 
-	    <link rel="stylesheet" href="{$basePath}/css/style.css">
-	    <link rel="stylesheet" href="{$basePath}/css/reset.css">
+        <link rel="stylesheet" href="{$basePath}/css/style.css">
+        <link rel="stylesheet" href="{$basePath}/css/reset.css">
 
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Tomáš Mrázek">
+        <!-- SEO -->
         <meta name="description" content="">
         <meta name="keywords" content="">
+        <meta name="author" content="Tomáš Mrázek">
+
         {**<meta http-equiv="refresh" content="120" >*}
-	    {block head}{/block}
+
 	    <script n:syntax="off">
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,19 +29,17 @@
 
           ga('create', 'UA-61545478-1', 'auto');
           ga('send', 'pageview');
-
         </script>
     </head>
 
     <body>
-
-	    <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
         <div id="container">
-
             {control dayInfoComponent}
             <div id="top-banner"></div>
+
             <img id="header" src="{$basePath}/images/header.jpg">
             <hr class="blue">
+
             <div id="box">
                 <div id="mainMenu">
                     <ul>
@@ -50,10 +51,12 @@
                         <a href=""><li>OPUSTILI NÁS</li></a>
                     </ul>
                 </div>
+
                 <div id="content">
                     {control refreshBannerComponent}
                     {include content}
                 </div>
+
                 <div id="asideContent">
                     <ul>
                         <a href=""><li>DOPRAVNÍ OMEZENÍ</li></a>
@@ -75,7 +78,9 @@
                     {control currencyComponent}
                 </div>
             </div>
+
             {control assideBannerComponent}
+
             <div id="footer">
                 <ul>
                     <li>ADMINISTRACE</li>
@@ -85,7 +90,6 @@
                     <li>COPYRIGHT 2006 - 2015</li>
                 </ul>
             </div>
-
         </div>
     </body>
 </html>

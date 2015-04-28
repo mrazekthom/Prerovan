@@ -9,7 +9,7 @@
             {/first}
             <a href={$item['url']} target="_blank" >{$item['title']}</a>
             {first}
-                <p><div class='RssItemDescription'>{$item['description']|noescape|truncate:150}</div></p>
+                <div class='RssItemDescription'>{$item['description']|noescape|truncate:150}</div>
                 </div>
             {/first}
         </div>
