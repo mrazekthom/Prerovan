@@ -1,0 +1,69 @@
+.Survey {
+    width: 188px;
+    padding: 5px;
+    border: 1px solid darkBlue;
+}
+
+.Survey__name {
+    font-size: 24px;
+}
+
+.Survey__item {
+    margin: 2px 0;
+}
+
+.Survey__item--name {
+    color: blue;
+    text-decoration: underline;
+    position: relative;
+}
+
+.Survey__item--votes {
+    color: black;
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+.Survey__item--bar {
+    clear: both;
+    display: inline-block;
+    height: 10px;
+}
+
+.Survey__item--percents {
+    float: right;
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+.Survey__item:nth-child(1) .Survey__item--bar {
+    background-color: #bf1732;
+    width: 160px;
+}
+
+.Survey__item:nth-child(2) .Survey__item--bar {
+    background-color: #2f1148;
+    width: 160px;
+}
+
+.Survey__item:nth-child(3) .Survey__item--bar {
+    background-color: #3a5d6c;
+    width: 160px;
+}
+
+.Survey__item:nth-child(4) .Survey__item--bar {
+    background-color: #a4ef23;
+    width: 160px;
+}
+
+.Survey__item:nth-child(5) .Survey__item--bar {
+    background-color: #2049b9;
+    width: 160px;
+}
+
+.Survey__item:nth-child(6) .Survey__item--bar {
+    background-color: #a6a665;
+    width: 160px;
+}

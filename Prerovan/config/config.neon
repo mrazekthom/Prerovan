@@ -76,7 +76,7 @@ services:
 	- implement: Prerovan\Components\IRefreshBannerComponentFactory
 	- implement: Prerovan\Components\ICurrencyComponentFactory
 	- implement: Prerovan\Components\ISurveyComponentFactory
-	- implement: Prerovan\Components\IAssideBannerComponentFactory
+	- implement: Prerovan\Components\IAsideBannerComponentFactory
 	- implement: Prerovan\Components\IDayInfoComponentFactory
 	- implement: Prerovan\Components\IAdvertisingMainComponentFactory
 

@@ -8,14 +8,21 @@ use Nette\Utils\Strings;
 
 class RssFactory extends Object
 {
-
+    /** url for rssFeed */
     const NEWS = "http://www.aktualne.cz/mrss/";
     const SPORT = "http://www.sport.cz/rss2";
     const BOULEVARD = "http://www.super.cz/rss2";
     const STREAM = "";
 
+    /** count of news, where is rendering */
     private $count;
 
+    /**
+     * Get rssFeed and count of this
+     *
+     * @param $rssFeed
+     * @param $count
+     */
     public function generate($rssFeed, $count)
     {
         $url = $rssFeed;
@@ -25,11 +32,11 @@ class RssFactory extends Object
             $header = $response->getHeaders();
             $response = $response->getResponse();
         } catch (Curl\CurlException $e) {
-            throw $e;
+            // throw $e;
         }
 
         $this->count = $count;
-        $xml =  new \SimpleXMLElement($response);
+        $xml = new \SimpleXMLElement($response);
 
         if ($rssFeed == static::NEWS) {
             return $this->generateNewsFeed($xml);
@@ -42,6 +49,12 @@ class RssFactory extends Object
         }
     }
 
+    /**
+     * Formate rss NewsFeed
+     *
+     * @param $xml
+     * @return mixed
+     */
     private function generateNewsFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
@@ -58,6 +71,12 @@ class RssFactory extends Object
         return $rssNewFeed;
     }
 
+    /**
+     * Formate rss SportFeed
+     *
+     * @param $xml
+     * @return mixed
+     */
     private function generateSportFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
@@ -74,7 +93,12 @@ class RssFactory extends Object
         return $rssSportFeed;
     }
 
-
+    /**
+     * Formate rss BoulevardFeed
+     *
+     * @param $xml
+     * @return mixed
+     */
     private function generateBoulevardFeed($xml)
     {
         $namespace = $xml->getNamespaces(true);
@@ -93,6 +117,11 @@ class RssFactory extends Object
         return $rssBoulevardFeed;
     }
 
+    /**
+     * Formate rss VideoFeed
+     *
+     * @param $xml
+     */
     private function generateVideoFeed($xml)
     {
 

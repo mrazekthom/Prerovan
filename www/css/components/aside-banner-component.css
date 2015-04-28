@@ -1,0 +1,10 @@
+.aside-banner {
+    width: 160px;
+    float: left;
+}
+
+.aside-banner img {
+    width: 140px;
+    height: 170px;
+    padding: 0 0 5px 20px;
+}

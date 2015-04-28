@@ -4,7 +4,7 @@ namespace Prerovan\Components;
 
 use Prerovan\Model\Repository\BannersPhotoRepository;
 
-class AssideBannerComponent extends BaseComponent
+class AsideBannerComponent extends BaseComponent
 {
     /** @var  BannersPhotoRepository */
     private $BPR;
@@ -21,11 +21,11 @@ class AssideBannerComponent extends BaseComponent
     }
 }
 
-interface IAssideBannerComponentFactory
+interface IAsideBannerComponentFactory
 {
 
     /**
-     * @return AssideBannerComponent
+     * @return AsideBannerComponent
      */
     public function create();
 

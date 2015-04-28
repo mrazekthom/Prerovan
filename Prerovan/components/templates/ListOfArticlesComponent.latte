@@ -1,9 +1,9 @@
-<div class="articles">
-    <span class="prerovanNews">Prerovan aktuality</span>
-    <hr class='blue'>
-    <div class="listOfArticles">
-        <p n:foreach="$articles as $article"><a href="">{$article->title|truncate:40}</a><span class="inserted">({$article->inserted|date:'j. n. Y'})</span></p>
-        <div class="nextArticles"><a href="">Více z přerovských aktualit >> </a></div>
+<div class="prerovan-news">
+    <span class="prerovan-news-title">Prerovan aktuality</span>
+    <hr class='prerovan-news-hr'>
+    <div class="prerovan-news-list-of-articles">
+        <p n:foreach="$articles as $article"><a href="">{$article->title|truncate:40}</a><span class="prerovan-news-list-of-articles-inserted">({$article->inserted|date:'j. n. Y'})</span></p>
+        <div class="prerovan-news-next-articles"><a href="">Více z přerovských aktualit >> </a></div>
     </div>
     <img src="{$basePath}/images/images_for_joke/001.jpg">
 </div>

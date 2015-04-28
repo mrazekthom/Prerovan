@@ -1,0 +1,23 @@
+.banners-container {
+    width: 640px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    float: left;
+}
+
+.banner {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.banners-container .banner img {
+    width: 640px;
+    height: 80px;
+    float: left;
+}

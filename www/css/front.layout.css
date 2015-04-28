@@ -1,0 +1,137 @@
+@font-face{
+    font-family: Calibri;
+    src: url("fonts/Calibri.ttf");
+}
+
+
+#container {
+    width: 1024px;
+    margin: 0 auto;
+    font-family: Calibri;
+    padding: 0 10px;
+}
+
+#header {
+}
+
+#box {
+    width: 864px;
+    float: left;
+}
+
+
+#mainMenu {
+    width: 100%;
+}
+
+#mainMenu ul {
+    float: left;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+    width: calc(100% - 2px);
+    max-height: 46px;
+}
+
+#mainMenu ul li:hover {
+    background-color: #1935a3;
+    color: white;
+}
+
+#mainMenu ul li {
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #1935a3;
+    float: left;
+}
+
+#content {
+    width: 640px;
+    float: left;
+}
+
+#mainBanner {
+    width: 100%;
+    height: 120px;
+    margin: 0 0 10px 0;
+}
+
+#asideContent {
+    width: 200px;
+    margin-left: 24px;
+    float: left;
+}
+
+#asideContent ul {
+    width: calc(100% - 2px);
+    margin-bottom: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+}
+
+#asideContent ul li {
+    padding: 5px 0 5px 10px;
+    font-size: 15px;
+    color: #1935a3;
+}
+
+#asideContent ul li:hover {
+    background-color: #1935a3;
+    color: white;
+}
+
+#asideContent img {
+    /*margin: 5px 0;*/
+}
+
+#footer {
+    width: 100%;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+    margin: 5px 0;
+}
+
+#footer ul {
+    margin: 0 auto;
+}
+
+#footer ul li {
+    margin: 5px 25px;
+    font-size: 16px;
+    color: #66676b;
+    float: left;
+}
+
+.blue {
+    margin: 10px 0;
+    height: 10px;
+    background-color: #1935a3;
+}
+
+#Homepage {
+    width: 100%;
+}
+
+
+#shelder {
+    width: 198px;
+    height: 150px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+}
+
+
+#top-banner{
+    margin: 20px 0 0;
+    width: 300px;
+    height: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    float: right;
+}

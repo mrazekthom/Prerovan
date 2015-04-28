@@ -1,0 +1,56 @@
+.prerovan-news{
+    width: 100%;
+    float: left;
+    margin: 0 0 10px;
+}
+
+.prerovan-news-title{
+    color: #1935a3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.prerovan-news-hr{
+    margin: 2px 0;
+    height: 5px;
+    background-color: #1935a3;
+}
+
+.prerovan-news-list-of-articles p{
+    margin: 7px 0 7px;
+}
+
+.prerovan-news-list-of-articles p a{
+    color: #1935a3;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+.prerovan-news-list-of-articles p a:hover{
+    color: red;
+}
+
+.prerovan-news-list-of-articles p .prerovan-news-list-of-articles-inserted{
+    margin: 0 0 0 5px;
+    color: #999999;
+    font-size: 11px;
+}
+
+.prerovan-news-list-of-articles{
+    float: left;
+}
+
+.prerovan-news img{
+    float: right;
+    margin: 0 0 0 0;
+    max-height: 170px;
+}
+
+.prerovan-news-next-articles a{
+    font-size: 20px;
+    color: #1935a3;
+}
+
+.prerovan-news-next-articles a:hover {
+    color: red;
+}

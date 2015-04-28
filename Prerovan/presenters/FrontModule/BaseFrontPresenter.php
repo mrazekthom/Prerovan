@@ -2,7 +2,7 @@
 
 namespace Prerovan\FrontModule\Presenters;
 
-use Prerovan\Components\IAssideBannerComponentFactory;
+use Prerovan\Components\IAsideBannerComponentFactory;
 use Prerovan\Components\ICurrencyComponentFactory;
 use Prerovan\Components\IDayInfoComponentFactory;
 use Prerovan\Components\IRefreshBannerComponentFactory;
@@ -24,7 +24,7 @@ abstract class BaseFrontPresenter extends BasePresenter
     /** @var ITimeChangeBannerComponentFactory @inject */
     public $TCBPC;
 
-    /** @var IAssideBannerComponentFactory @inject */
+    /** @var IAsideBannerComponentFactory @inject */
     public $ABCF;
 
     /** @var IRefreshBannerComponentFactory @inject */

@@ -1,0 +1,38 @@
+.Currency {
+    margin: 10px 0;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1935a3;
+}
+
+.Currency__item {
+}
+
+.Currency__item--name {
+    display: inline-block;
+    width: 32px;
+}
+
+.Currency__item {
+    margin: 2px 0;
+}
+
+.Currency__item--value {
+    display: inline-block;
+    width: 45px;
+    text-align: right;
+}
+
+.Currency__item img {
+    vertical-align: middle;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0 5px;
+}
+
+.Currency__item--percents {
+    display: inline-block;
+    width: 45px;
+    text-align: right;
+}

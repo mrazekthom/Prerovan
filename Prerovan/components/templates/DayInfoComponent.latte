@@ -1,8 +1,9 @@
 <div class="day-info">
-<img class="day-info-image" src="{$basePath}/images/images_for_weather/{$weather['image']}">
+    <img class="day-info-image" src="{$basePath}/images/images_for_weather/{$weather['image']}">
+
     <div class="day-info-information">
         {$day}
-        <div id="ikal-jmena"></div>
+        <div class="day-info-information-holiday" id="ikal-jmena"></div>
         <script type="text/javascript" src="http://www.ikal.cz/widget/kalendar-jmen.js.php"></script>
         <script type="text/javascript">
             iKAL_JMENA.init('ctext: 1935a3, htext: 17, showcount: 1');

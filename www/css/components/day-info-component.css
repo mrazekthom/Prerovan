@@ -1,0 +1,21 @@
+.day-info{
+    color: #1935a3;
+    font-size: 17px;
+    width: 300px;
+    margin: 30px 0 0;
+    float: right;
+}
+
+.day-info-information{
+    float: right;
+    text-align: right;
+}
+
+.day-info-information-holiday{
+    padding: 4px 0;
+}
+
+.day-info-image{
+    float: right;
+    margin: 5px 0 0 20px;
+}

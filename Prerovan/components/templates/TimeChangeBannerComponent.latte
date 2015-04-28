@@ -6,7 +6,7 @@
                 index = 0;
 
         var rotate = function () {
-            if (index+1 > banners.length) {
+            if (index + 1 > banners.length) {
                 index -= banners.length;
             }
             $container.find('.banner').fadeOut();
@@ -17,30 +17,10 @@
         setInterval(rotate, {$delay});
     });
 </script>
-<style>
-    .banners-container {
-        width: 640px;
-        height: 80px;
-        position: relative;
-        overflow: hidden;
-        font-size: 0;
-        float: left;
-    }
-    .banner {
-        display: none;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-    .banners-container .banner img {
-        width: 640px;
-        height: 80px;
-        float: left;
-    }
-</style>
 
 <div class="banners-container banners-container-{$id}"><!--
---><div n:foreach="$banners as $banner" class="banner banner-{$banner->id}"><img src="{$basePath}/images/{$banner->folder}/{$banner->name}" alt=""/></div>
+-->
+    <div n:foreach="$banners as $banner" class="banner banner-{$banner->id}">
+        <img src="{$basePath}/images/{$banner->folder}/{$banner->name}" alt=""/>
+    </div>
 </div>

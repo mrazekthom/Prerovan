@@ -1,0 +1,36 @@
+.list-of-rss-feed-component{
+    padding: 5px 0;
+    float: left;
+}
+
+.list-of-rss-feed-component-hr{
+    margin: 2px 0;
+    height: 5px;
+    background-color: #1935a3;
+}
+
+.list-of-rss-feed-component-name{
+    color: #D51616;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list-of-rss-feed-component-item{
+    float: left;
+    margin: 0 0 5px;
+}
+
+.list-of-rss-feed-component-item img{
+    margin: 0 5px 0 0;
+    float: left;
+    height: 56px;
+}
+
+.list-of-rss-feed-component-item a{
+    font-weight: bold;
+    color: #1935a3;
+}
+
+.list-of-rss-feed-component-item a:hover{
+    color: red;
+}

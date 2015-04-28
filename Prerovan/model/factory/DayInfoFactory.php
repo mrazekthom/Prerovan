@@ -4,14 +4,17 @@ namespace Prerovan\Model\Factory;
 
 use Kdyby\Curl;
 use Nette\Object;
-use Nette\Utils\Strings;
-use Nette\Utils\DateTime;
 
 class DayInfoFactory extends Object
 {
-
+    /** url for weather */
     const WEATHER = "http://www.in-pocasi.cz/pocasi-na-web/xml-ukazky/mesto.xml";
 
+    /**
+     * Get actual weather
+     *
+     * @return array
+     */
     public function actualWeather()
     {
         $url = $this::WEATHER;
@@ -23,7 +26,7 @@ class DayInfoFactory extends Object
         } catch (Curl\CurlException $e) {
             throw $e;
         }
-        $xml =  new \SimpleXMLElement($response);
+        $xml = new \SimpleXMLElement($response);
 
         $actual = [
             'status' => $this->getCorrectName((string)$xml->mesto->actual['stav']),
@@ -34,7 +37,14 @@ class DayInfoFactory extends Object
         return $actual;
     }
 
-    private function getCorrectName($status){
+    /**
+     * Decode xml name to status
+     *
+     * @param $status
+     * @return mixed
+     */
+    private function getCorrectName($status)
+    {
         $correctName = [
             'zatazeno' => 'Zataženo',
             'skorojasno' => 'Skoro jasno',
